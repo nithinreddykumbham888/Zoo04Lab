@@ -59,7 +59,7 @@ public class Kangaroo extends Animal {
         return g-(g*(m/100));
     }
 
-    public static void main()
+    public static void main(String[] args)
     {
         var k=new Kangaroo("Kiwi");
         k.speak();
