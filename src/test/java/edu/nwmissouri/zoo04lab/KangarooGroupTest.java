@@ -42,11 +42,9 @@ public class KangarooGroupTest {
     @Test
     public void testCreate() {
         System.out.println("create");
-        int expResult = 0;
+        int expResult = 3;
         int result = KangarooGroup.create();
         assertEquals(expResult, result);
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
     }
 
     /**
@@ -55,9 +53,9 @@ public class KangarooGroupTest {
     @Test
     public void testRun() {
         System.out.println("run");
+        KangarooGroup.create();
         KangarooGroup.run();
-        // TODO review the generated test code and remove the default call to fail.
-        fail("The test case is a prototype.");
+        assertTrue(true);
     }
     
 }

@@ -1,6 +1,8 @@
 package edu.nwmissouri.zoo04lab;
 
+import edu.nwmissouri.zoo04lab.Kangaroo.Calender;
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -8,6 +10,7 @@ import java.util.ArrayList;
  */
 public class KangarooGroup {
      private static ArrayList<Kangaroo> myGroup;
+     
 
     /**
      * Create a static group of Kangaroo
@@ -25,6 +28,7 @@ public class KangarooGroup {
     }
 
     public static void run() {
+        Scanner s=new Scanner(System.in);
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
         System.out.println("Hey wassup Kangaroo!");
         for (Kangaroo kangaroo : myGroup) {
@@ -33,6 +37,9 @@ public class KangarooGroup {
             kangaroo.speed();
             kangaroo.region();
             kangaroo.calc();
+            System.out.println("Please enter the type of enum value of July, August, September");
+            Calender v=Calender.August;
+            System.out.println("Kangaroo "+kangaroo.name+" from "+v);
         }
 
         System.out.println("Great to see you Kangaroo");
