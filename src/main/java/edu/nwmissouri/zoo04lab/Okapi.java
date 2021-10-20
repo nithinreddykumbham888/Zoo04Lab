@@ -6,9 +6,9 @@
 package edu.nwmissouri.zoo04lab;
 
 /**
- *
- * This class defines the nature of the Okapi animal
- * @author Pranay bhargav reddy bakaram(s545147)
+ * 
+ * This document is color of leafs
+ * @author Pranay Bhargav Reddy Bakaram(s545147)
  */
 enum ColorsOfLeafs{
     YELLOW,
@@ -17,6 +17,10 @@ enum ColorsOfLeafs{
     GREEN,
    
 }
+/**
+ * This class defines the nature of the Okapi animal.
+ * @author Pranay bhargav reddy bakaram(s545147)
+ */
 public class Okapi extends Animal {
 
     
