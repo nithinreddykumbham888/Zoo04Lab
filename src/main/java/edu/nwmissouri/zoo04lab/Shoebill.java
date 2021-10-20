@@ -16,7 +16,7 @@ public class Shoebill extends Animal {
 
     @Override
     public void speak() {
-        System.out.println("I'm a Shoebill \n---------------\nsound like a Machine Gun!");
+        System.out.println("I'm a Shoebill sound like a Machine Gun!");
     }
 
     @Override
