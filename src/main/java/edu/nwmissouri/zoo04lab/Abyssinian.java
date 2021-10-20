@@ -6,7 +6,7 @@
 package edu.nwmissouri.zoo04lab;
 
 /**
- *
+ *Abyssinian class is derived from animal class
  * @author Vamsi krishna Areti (S544902)
  */
 //class Abyssinian is extending the animal class
