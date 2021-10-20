@@ -15,6 +15,10 @@
 
 - Explore API at <https://denisecase.github.io/Zoo04Lab/edu/nwmissouri/zoo04lab/package-summary.html>
 
+## Test Coverage
+
+- Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
+
 -----
 
 ## Web App
