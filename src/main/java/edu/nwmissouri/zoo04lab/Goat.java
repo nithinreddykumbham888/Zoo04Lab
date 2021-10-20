@@ -38,10 +38,10 @@ public class Goat extends Animal {
     }
     
     /**
-     ** Custom confess function
+     ** custom confess function
      *
-     * @param valueOne double input
-     * @param valueTwo int input
+     * @param valueOne 
+     * @param valueTwo 
      * 
      */
     public void confess() {
@@ -52,18 +52,18 @@ public class Goat extends Animal {
     }
 
     /**
-     * Custom getGoatAddtion function 
+     * custom getGoatAddtion function 
      *
-     * @param valueOne double input
-     * @param valueTwo int input
-     * @return double sum
+     * @param valueOne 
+     * @param valueTwo 
+     * @return double - sum
      */
     public double getGoatAddition(double valueOne, int valueTwo) {
         return valueOne + valueTwo;
     }
     
     /**
-     * Enum function with plant values
+     * enum function with gender values
      * 
      */
     public enum Gender {
