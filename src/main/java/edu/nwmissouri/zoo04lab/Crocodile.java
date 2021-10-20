@@ -11,7 +11,7 @@ public class Crocodile extends Animal {
     
     @Override
     public void speak() {
-        System.out.printf("I'm %s. I'm an Crocodile!", this.name");
+        System.out.printf("I'm %s. I'm an Crocodile!", this.name);
     }
     
     @Override
