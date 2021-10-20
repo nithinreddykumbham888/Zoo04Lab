@@ -8,7 +8,7 @@ package edu.nwmissouri.zoo04lab;
 /**
  * 
  * This document is color of leafs
- * @author Pranay Bhargav Reddy Bakaram
+ * @author Pranay Bhargav Reddy Bakaram(s545147)
  */
 enum ColorsOfLeafs{
     YELLOW,
