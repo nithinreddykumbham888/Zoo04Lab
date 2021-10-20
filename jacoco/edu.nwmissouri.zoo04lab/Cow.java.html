@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Cow.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Cow.java</span></div><h1>Cow.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ * Cow class (derived subclass of the superclass Animal)
+ *
+ * @author Harika_Chintala
+ */
+public class Cow extends Animal {
+
+    /**
+     * Cow Constructor
+     *
+     * @param name - the name of this cow
+     */
+    public Cow(String name) {
+<span class="fc" id="L21">        super(name);</span>
+<span class="fc" id="L22">    }</span>
+    //@Override
+
+    public void eat() {
+<span class="fc" id="L26">        System.out.println(&quot;I eat like Yumm yumm yumm!!&quot;);</span>
+<span class="fc" id="L27">    }</span>
+
+    @Override
+    public void speak() {
+<span class="fc" id="L31">        System.out.println(&quot;I am a Cow.. &quot; + this.name);</span>
+<span class="fc" id="L32">    }</span>
+
+    //@Override
+    public void child() {
+<span class="nc" id="L36">        System.out.println(&quot;I can give birth to one child at once&quot;);</span>
+<span class="nc" id="L37">    }</span>
+    //@Override
+
+    public void color() {
+<span class="fc" id="L41">        System.out.println(&quot;I can be in black, brown and white color &quot;);</span>
+<span class="fc" id="L42">    }</span>
+
+    @Override
+    public void move() {
+<span class="fc" id="L46">        System.out.println(&quot;When I move, I move, move, move...&quot;);</span>
+<span class="fc" id="L47">    }</span>
+
+    /**
+     *
+     * @param morningMilkProdection is of type double
+     * @param eveningMilkProduction is of type double
+     * @return double value
+     */
+    public double getCowAddition(double morningMilkProdection, double eveningMilkProduction) {
+<span class="fc" id="L56">        return morningMilkProdection + eveningMilkProduction;</span>
+    }
+
+    /**
+     *
+     */
+    public void studentCow() {
+<span class="fc" id="L63">        double morningMilkProdection = 2.3;</span>
+<span class="fc" id="L64">        double eveningMilkProduction = 1.5;</span>
+<span class="fc" id="L65">        double perDayMilkProduction = getCowAddition(morningMilkProdection, eveningMilkProduction);</span>
+<span class="fc" id="L66">        System.out.println(&quot;I am &quot; + this.name + &quot;, I produce &quot; + morningMilkProdection + &quot;liters Of milk in the morning and &quot; + eveningMilkProduction + &quot;liters in the Evening, Overall I will produce &quot; + perDayMilkProduction + &quot;\&quot;liters per\&quot; day&quot;);</span>
+<span class="fc" id="L67">    }</span>
+
+<span class="fc" id="L69">    public enum EnumDirections {</span>
+<span class="fc" id="L70">        EAST, WEST, SOUTH, NORTH;</span>
+    }
+
+    public void directionToGo(EnumDirections d) {
+<span class="pc bpc" id="L74" title="1 of 2 branches missed.">        if (null == d) {</span>
+<span class="nc" id="L75">            System.out.println(&quot;\&quot;I am travelling towards EAST\&quot;&quot;);</span>
+        } else {
+<span class="pc bpc" id="L77" title="3 of 4 branches missed.">            switch (d) {</span>
+                case EAST -&gt;
+<span class="nc" id="L79">                    System.out.println(&quot;\&quot;I am travelling towards EAST\&quot;&quot;);</span>
+                case WEST -&gt;
+<span class="fc" id="L81">                    System.out.println(&quot;\&quot;I am travelling towards WEST\&quot;&quot;);</span>
+                case SOUTH -&gt;
+<span class="nc" id="L83">                    System.out.println(&quot;\&quot;I am travelling towards SOUTH\&quot;&quot;);</span>
+                default -&gt;
+<span class="nc" id="L85">                    System.out.println(&quot;\&quot;I am travelling towards NORTH  \&quot;&quot;);</span>
+            }
+        }
+<span class="fc" id="L88">    }</span>
+
+    public static void main(String[] args) {
+<span class="nc" id="L91">        Cow cow = new Cow(&quot;cowwy&quot;);</span>
+<span class="nc" id="L92">        cow.speak();</span>
+<span class="nc" id="L93">        cow.eat();</span>
+<span class="nc" id="L94">        cow.move();</span>
+<span class="nc" id="L95">        cow.color();</span>
+<span class="nc" id="L96">        cow.studentCow();</span>
+<span class="nc" id="L97">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

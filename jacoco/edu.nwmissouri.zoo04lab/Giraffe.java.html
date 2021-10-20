@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Giraffe.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Giraffe.java</span></div><h1>Giraffe.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ *Giraffe class (derived subclass of the superclass Animal)
+ * 
+ * @author Himaja Reddy Maddi
+ */
+public class Giraffe extends Animal {
+
+    /**
+     * Giraffe constructor
+     *
+     * @param name - the name of this Giraffe
+     */
+    public Giraffe(String name) {
+<span class="fc" id="L21">        super(name);</span>
+<span class="fc" id="L22">    }</span>
+
+    @Override
+    public void speak() {
+<span class="fc" id="L26">        System.out.printf(&quot;I'm %s. I'm giraffe!&quot;, this.name);</span>
+<span class="fc" id="L27">    }</span>
+
+    @Override
+    public void move() {
+<span class="fc" id="L31">        System.out.println(&quot;When I move, I run, run, run.&quot;);</span>
+
+<span class="fc" id="L33">    }</span>
+
+    /**
+     * Custom Giraffe function for performing an operation
+     *
+     * 
+     */
+    public void multiply() {
+<span class="nc" id="L41">        double a = 1.5;</span>
+<span class="nc" id="L42">        int b = 4;</span>
+<span class="nc" id="L43">        double c = getGiraffeMultiplication(a, b);</span>
+<span class="nc" id="L44">        System.out.printf(&quot;I know GiraffeMultiplication! %4.2f times %d is %4.2f \n&quot;, a, b, c);</span>
+<span class="nc" id="L45">    }</span>
+
+    /**
+     * Custom Giraffe function 
+     *
+     * @param valueOne double input
+     * @param valueTwo int input
+     * @return double sum
+     */
+    public double getGiraffeMultiplication(double leg1, int leg2) {
+<span class="fc" id="L55">        return leg1 * leg2;</span>
+    }
+
+    public static void main(String[] args) {
+<span class="nc" id="L59">        var giraffe = new Giraffe(&quot;Spike&quot;);</span>
+<span class="nc" id="L60">        giraffe.speak();</span>
+<span class="nc" id="L61">        giraffe.move();</span>
+<span class="nc" id="L62">        giraffe.multiply();</span>
+<span class="nc" id="L63">    }</span>
+
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

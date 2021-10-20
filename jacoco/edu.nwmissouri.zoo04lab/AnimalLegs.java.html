@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>AnimalLegs.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">AnimalLegs.java</span></div><h1>AnimalLegs.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo04lab;
+
+/**
+ * Animal number of leg options
+ * 
+ * Illustrates enumerated types (Java enum with int value)
+ * Good for attributes selected from a drop-down list
+ *
+ * @author Denise Case
+ */
+<span class="nc" id="L11">public enum AnimalLegs {</span>
+
+    /**
+     * Animal has no legs / does not apply
+     */
+<span class="nc" id="L16">    NO_LEGS(1),</span>
+    /**
+     * Animal generally has two legs
+     */
+<span class="nc" id="L20">    TWO_LEGS(2),</span>
+    /**
+     * Animal generally has four legs
+     */
+<span class="nc" id="L24">    FOUR_LEGS(3),</span>
+    /**
+     * Animal generally has many legs (more than 4)
+     */
+<span class="nc" id="L28">    OVER_FOUR_LEGS(4);</span>
+    
+    // Add private constructor if we want numeric values (e.g., in a database)
+
+    private final int count;
+
+<span class="nc" id="L34">    private AnimalLegs(int countInput) {</span>
+<span class="nc" id="L35">        this.count = countInput;</span>
+<span class="nc" id="L36">    }</span>
+
+    public int getStatus() {
+<span class="nc" id="L39">        return this.count;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

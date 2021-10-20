@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Buffalo.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Buffalo.java</span></div><h1>Buffalo.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ *
+ * @author Bhaskar Venkata Prudhvi Bobbala
+ */
+public class Buffalo extends Animal {
+<span class="nc" id="L13">    enum COLOR</span>
+            {
+<span class="nc" id="L15">        BLACK,</span>
+<span class="nc" id="L16">        BROWN</span>
+    }
+
+
+    /**
+     * *
+     * Constructor for Buffalo
+     *
+     * @param name - the name of this Buffalo
+     */
+    public Buffalo(String name) {
+<span class="fc" id="L27">        super(name);</span>
+<span class="fc" id="L28">    }</span>
+
+    /**
+     * *
+     * Override method for buffalo speak
+     */
+    @Override
+    public void speak() {
+<span class="fc" id="L36">        System.out.printf(&quot;I'm %s. I'm a Buffalo!&quot;, this.name);</span>
+<span class="fc" id="L37">    }</span>
+     
+    /**
+     * *
+     * Override method for buffalo move
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L45">        System.out.println(&quot;I usually walk with four legs&quot;);</span>
+<span class="fc" id="L46">    }</span>
+    /**
+     * *
+     * Override method for buffalo diet
+     */
+    //@Override
+    public void diet() {
+<span class="fc" id="L53">        System.out.println(&quot;I'm a Herbivore&quot;);</span>
+<span class="fc" id="L54">    }</span>
+
+    /**
+     * *
+     * Override method for buffalo family
+     */
+    //@Override
+    public void family() {
+<span class="fc" id="L62">        System.out.println(&quot;I am from Bovidae family&quot;);</span>
+<span class="fc" id="L63">    }</span>
+
+    /**
+     * *
+     * Override method for buffalo lifespan
+     */
+    //@Override
+    public void lifespan() {
+<span class="fc" id="L71">        System.out.println(&quot;My life span is 10-20 years&quot;);</span>
+<span class="fc" id="L72">    }</span>
+    
+     /**
+     * 
+     * @param morningMilkProduction is of type double 
+     * @param eveningMilkProduction is of type double
+     * @return double value
+     */
+    public double getBuffaloAddition(double morningMilkProduction, double eveningMilkProduction)
+    {
+<span class="fc" id="L82">        return morningMilkProduction + eveningMilkProduction;</span>
+    }
+    
+    /**
+     * 
+     */
+    public void Buffalo(){
+<span class="nc" id="L89">        double morningMilkProduction = 4.5;</span>
+<span class="nc" id="L90">        double eveningMilkProduction = 4.0;</span>
+<span class="nc" id="L91">        double perDayMilkProduction = getBuffaloAddition(morningMilkProduction, eveningMilkProduction);</span>
+<span class="nc" id="L92">        System.out.println(&quot;I am &quot; + this.name + &quot;, I produce &quot; + morningMilkProduction + &quot;liters Of milk in the morning and &quot;+eveningMilkProduction+&quot;liters in the Evening, Overall I will produce &quot;+perDayMilkProduction+&quot;\&quot;liters per\&quot; day&quot;);</span>
+<span class="nc" id="L93">    }</span>
+    
+    public static void main(String[] args){
+<span class="nc" id="L96">        Buffalo Buffalo=new Buffalo(&quot;Bobbala&quot;);</span>
+<span class="nc" id="L97">        Buffalo.speak();</span>
+<span class="nc" id="L98">        Buffalo.move();</span>
+<span class="nc" id="L99">        Buffalo.diet();</span>
+<span class="nc" id="L100">        Buffalo.family();</span>
+<span class="nc" id="L101">        Buffalo.lifespan();</span>
+<span class="nc" id="L102">        COLOR C1=COLOR.BLACK;</span>
+<span class="nc" id="L103">        COLOR C2=COLOR.BROWN;</span>
+<span class="nc" id="L104">        System.out.println(&quot;enums: &quot;+C1+&quot;\n&quot;+C2);</span>
+<span class="nc" id="L105">    }</span>
+        
+        
+
+}
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

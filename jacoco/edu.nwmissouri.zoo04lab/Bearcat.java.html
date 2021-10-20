@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Bearcat.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Bearcat.java</span></div><h1>Bearcat.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ * CREATING BEARCAT CLASS EXTENDING THE ANIMAL CLASS
+ * 
+ * @author Pavan Kumar Atmakuri
+ */
+public class Bearcat extends Animal {
+    
+    
+<span class="nc" id="L16">    public enum occurFrom{</span>
+<span class="nc" id="L17">    INDIA,</span>
+<span class="nc" id="L18">    NEPAL,</span>
+<span class="nc" id="L19">    BANGLADESH;</span>
+    }
+    public Bearcat(String name){
+<span class="fc" id="L22">        super(name);</span>
+<span class="fc" id="L23">    }</span>
+
+    @Override
+    public void move() {
+<span class="fc" id="L27">        System.out.println(&quot;I will climb trees :)&quot;);</span>
+<span class="fc" id="L28">    }</span>
+
+    @Override
+    public void speak() {
+<span class="fc" id="L32">         System.out.printf(&quot;I'm %s. I'm a Bearcat! \n&quot;, this.name);</span>
+<span class="fc" id="L33">    }</span>
+    
+    public void breed(){
+<span class="fc" id="L36">        System.out.println(&quot;I'm Binturong breed&quot;);</span>
+<span class="fc" id="L37">    }</span>
+    
+    public void cal(){
+<span class="nc" id="L40">        int a=55;</span>
+<span class="nc" id="L41">        double p=10;</span>
+<span class="nc" id="L42">        double d=discount(a,p);</span>
+<span class="nc" id="L43">        System.out.println(&quot;After discount the value become:&quot;+d);</span>
+<span class="nc" id="L44">    }</span>
+
+    public double discount(int a,double p) {
+<span class="fc" id="L47">    return a-(a*(p/100));    </span>
+    }
+    
+    public static void main(String[] args) {
+<span class="nc" id="L51">        var a = new Bearcat(&quot;Pavan&quot;);</span>
+<span class="nc" id="L52">        a.speak();</span>
+<span class="nc" id="L53">        a.move();</span>
+<span class="nc" id="L54">        a.breed();</span>
+<span class="nc" id="L55">        a.cal();</span>
+<span class="nc" id="L56">    }</span>
+    
+    
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

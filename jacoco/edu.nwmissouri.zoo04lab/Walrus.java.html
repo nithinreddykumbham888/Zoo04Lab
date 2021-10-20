@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Walrus.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Walrus.java</span></div><h1>Walrus.java</h1><pre class="source lang-java linenums">/*To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ * Walrus class,derived subclass from the superclass Animal)
+ * @author Rehaman Naguru Abdur
+ */
+public class Walrus extends Animal {
+    
+    
+     public void calculation() {
+<span class="fc" id="L15">        double a = 4.2;</span>
+<span class="fc" id="L16">        int b = 5;</span>
+<span class="fc" id="L17">        double c = getWalrusAddition(a, b);</span>
+<span class="fc" id="L18">        System.out.printf(&quot;I know WalrusAddition! %4.2f plus %d is %4.2f \n&quot;, a, b, c);</span>
+<span class="fc" id="L19">    }</span>
+
+    static double getWalrusAddition(double first, int second) {
+        //throw new UnsupportedOperationException(&quot;Not supported yet.&quot;); //To change body of generated methods, choose Tools | Templates.
+        
+<span class="fc" id="L24">        return first + second;</span>
+    }
+
+
+    //@param name
+    public Walrus(String name) { // walrus constructor with parameter
+<span class="fc" id="L30">        super(name);</span>
+<span class="fc" id="L31">    }</span>
+
+    
+
+     @Override
+    public void speak() {//method
+<span class="fc" id="L37">        System.out.println(&quot;I'm walrus, I growls, taps and make bell-like sounds below water.&quot;);</span>
+<span class="fc" id="L38">    }</span>
+
+    @Override
+    public void move() { //method
+<span class="fc" id="L42">        System.out.println(&quot;I move move and run&quot;);</span>
+<span class="fc" id="L43">    }</span>
+    
+    public void intro() {
+<span class="fc" id="L46">        System.out.println(&quot;I'm an Walrus&quot;);</span>
+<span class="fc" id="L47">    }</span>
+    
+    
+    public void about() {
+<span class="fc" id="L51">        System.out.println(&quot;I am a sea animal&quot;);</span>
+<span class="fc" id="L52">    }</span>
+    
+     public static void main(String[] args) {
+<span class="nc" id="L55">        var a = new Walrus(&quot;Rehaman&quot;);</span>
+<span class="nc" id="L56">        a.speak();</span>
+<span class="nc" id="L57">        a.move();</span>
+<span class="nc" id="L58">        a.calculation();</span>
+<span class="nc" id="L59">        a.intro();</span>
+<span class="nc" id="L60">        a.about();</span>
+<span class="nc" id="L61">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

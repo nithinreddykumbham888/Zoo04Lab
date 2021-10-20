@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Panda.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Panda.java</span></div><h1>Panda.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the edsitor.
+ */
+//package edu.nwmissouri.preethi04lab;
+package edu.nwmissouri.zoo04lab;
+
+/**
+ *
+ * @author Preethi
+ */
+public class Panda extends Animal {
+
+    /**
+     * Panda constructor
+     *
+     * @param name - the name of this Panda
+     */
+    public Panda(String name) {
+<span class="fc" id="L21">        super(name);</span>
+<span class="fc" id="L22">    }</span>
+
+    /**
+     * speak overrides function in animal class
+     */
+    @Override
+    public void speak() {
+<span class="fc" id="L29">        System.out.println(&quot;Hi I am a &quot; + this.name + &quot;! I Squeak.. &quot;);</span>
+<span class="fc" id="L30">    }</span>
+    /**
+     * move overrides function in animal class
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L36">        System.out.println(&quot;I am a lazy animal and love to roll on ground&quot;);</span>
+<span class="fc" id="L37">    }</span>
+    /**
+     * function pandaType
+     */
+    public void pandaType(){
+<span class="nc" id="L42">        String firstName = &quot;RED&quot;;</span>
+<span class="nc" id="L43">        String lastName = &quot;PANDA&quot;;</span>
+        
+<span class="nc" id="L45">        System.out.println(&quot;There are 2 types of panda, RED panda ,BLACK-WHITE pandas....&quot;);</span>
+<span class="nc" id="L46">        String fullName = fullname(firstName,lastName);</span>
+<span class="nc" id="L47">       System.out.println(&quot;My full name is : &quot;+fullName);</span>
+
+<span class="nc" id="L49">    }</span>
+    /**
+     * 
+     * @param fname
+     * @param lname
+     * @return 
+     */
+        public String fullname(String fname,String lname){
+<span class="fc" id="L57">        return fname+lname;</span>
+    }
+        /**
+         * 
+         * @param args 
+         * main class for panda 
+         */
+        public static void main(String[] args) {
+<span class="nc" id="L65">        var panda = new Panda(&quot;Test&quot;);</span>
+<span class="nc" id="L66">        panda.speak();</span>
+<span class="nc" id="L67">        panda.move();</span>
+<span class="nc" id="L68">        panda.pandaType();</span>
+<span class="nc" id="L69">    }</span>
+ /*    @Override
+     public void looks() {
+         System.out.println(&quot;Hi I am a &quot; + this.name + &quot;! i am black and white with fur..&quot;);
+     }
+     @Override
+     public void eat() {
+         System.out.println(&quot;I like eating bamboo!&quot;);
+     }
+*/
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>ZooIndexController.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">ZooIndexController.java</span></div><h1>ZooIndexController.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo04lab;
+
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+import java.util.Map;
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+/**
+ * Controller that handles the default request (&quot;/&quot;).
+ *
+ * Use the new Java 15 text blocks to provide our menu. Thymeleaf:
+ * https://spring.io/guides/gs/serving-web-content/
+ *
+ * @author Denise Case
+ */
+@Controller
+<span class="nc" id="L20">public class ZooIndexController {</span>
+
+    private static final String GREETING_MESSAGE = &quot;Welcome to our 542 Zoo!&quot;;
+    private static final String GOODBYE_MESSAGE = &quot;Thank you for visiting our zoo!&quot;;
+    private static final int NUMBER_ANIMAL_TYPES = 60;
+
+    /**
+     * The @GetMapping annotation ensures that HTTP GET requests to / are mapped
+     * to the index() method.Example:
+     * https://spring.io/guides/gs/serving-web-content/
+     *
+     *
+     * @param idParam - the id provided in the URL
+     * @param model - the model that holds information from controller to view
+     * @return
+     */
+    @GetMapping(path = &quot;/&quot;)
+    public String index(
+            @RequestParam(name = &quot;id&quot;, required = false, defaultValue = &quot;0&quot;) String idParam,
+            Model model) {
+<span class="nc" id="L40">        model.addAttribute(&quot;id&quot;, idParam);</span>
+<span class="nc" id="L41">        model.addAttribute(&quot;name&quot;, &quot;World&quot;);</span>
+<span class="nc" id="L42">        model.addAttribute(&quot;greeting&quot;, GREETING_MESSAGE);</span>
+<span class="nc" id="L43">        model.addAttribute(&quot;animalMap&quot;, ZooBuildSwitch.getAllAnimalMap());</span>
+<span class="nc" id="L44">        model.addAttribute(&quot;customAnimalGroup&quot;, getCustomAnimalGroup(idParam));</span>
+        // associated with index.hmtl in src/main/resources/templates
+<span class="nc" id="L46">        return &quot;index&quot;;</span>
+    }
+
+    /**
+     * Map GET request to &quot;/about&quot; to about().
+     *
+     * @return filename from src/main/resources/templates folder
+     */
+    @GetMapping(path = &quot;/about&quot;)
+    public String about() {
+<span class="nc" id="L56">        return &quot;about&quot;;</span>
+    }
+
+    private String getCustomAnimalGroup(String id) {
+        // Create a stream to hold the output
+<span class="nc" id="L61">        var newStream = new ByteArrayOutputStream();</span>
+<span class="nc" id="L62">        var newPrintStream = new PrintStream(newStream);</span>
+        // IMPORTANT: Save the old System.out!
+<span class="nc" id="L64">        PrintStream old = System.out;</span>
+        // Tell Java to use your special stream
+<span class="nc" id="L66">        System.setOut(newPrintStream);</span>
+        
+<span class="nc" id="L68">        var intID = Integer.parseInt(id);</span>
+
+<span class="nc bnc" id="L70" title="All 61 branches missed.">        switch (intID) {</span>
+
+            case 1 -&gt; {
+<span class="nc" id="L73">                AardvarkGroup.create();</span>
+<span class="nc" id="L74">                AardvarkGroup.run();</span>
+<span class="nc" id="L75">            }</span>
+            case 2 -&gt; {
+<span class="nc" id="L77">                AbyssinianGroup.create();</span>
+<span class="nc" id="L78">                AbyssinianGroup.run();</span>
+<span class="nc" id="L79">            }</span>
+            case 3 -&gt; {
+<span class="nc" id="L81">                ArvicolinaeGroup.create();</span>
+<span class="nc" id="L82">                ArvicolinaeGroup.run();</span>
+<span class="nc" id="L83">            }</span>
+            case 4 -&gt; {
+<span class="nc" id="L85">                AspGroup.create();</span>
+<span class="nc" id="L86">                AspGroup.run();</span>
+<span class="nc" id="L87">            }</span>
+            case 5 -&gt; {
+<span class="nc" id="L89">                BearcatGroup.create();</span>
+<span class="nc" id="L90">                BearcatGroup.run();</span>
+<span class="nc" id="L91">            }</span>
+            case 6 -&gt; {
+<span class="nc" id="L93">                BengalTigerGroup.create();</span>
+<span class="nc" id="L94">                BengalTigerGroup.run();</span>
+<span class="nc" id="L95">            }</span>
+            case 7 -&gt; {
+<span class="nc" id="L97">                BlackJaguarGroup.create();</span>
+<span class="nc" id="L98">                BlackJaguarGroup.run();</span>
+<span class="nc" id="L99">            }</span>
+            case 8 -&gt; {
+<span class="nc" id="L101">                BlackPantherGroup.create();</span>
+<span class="nc" id="L102">                BlackPantherGroup.run();</span>
+<span class="nc" id="L103">            }</span>
+            case 9 -&gt; {
+<span class="nc" id="L105">                BrachiosaurusGroup.create();</span>
+<span class="nc" id="L106">                BrachiosaurusGroup.run();</span>
+<span class="nc" id="L107">            }</span>
+            case 10 -&gt; {
+<span class="nc" id="L109">                BuffaloGroup.create();</span>
+<span class="nc" id="L110">                BuffaloGroup.run();</span>
+<span class="nc" id="L111">            }</span>
+            case 11 -&gt; {
+<span class="nc" id="L113">                CatGroup.create();</span>
+<span class="nc" id="L114">                CatGroup.run();</span>
+<span class="nc" id="L115">            }</span>
+            case 12 -&gt; {
+<span class="nc" id="L117">                CheetahGroup.create();</span>
+<span class="nc" id="L118">                CheetahGroup.run();</span>
+<span class="nc" id="L119">            }</span>
+            case 13 -&gt; {
+<span class="nc" id="L121">                CongoLionGroup.create();</span>
+<span class="nc" id="L122">                CongoLionGroup.run();</span>
+<span class="nc" id="L123">            }</span>
+            case 14 -&gt; {
+<span class="nc" id="L125">                CowGroup.create();</span>
+<span class="nc" id="L126">                CowGroup.run();</span>
+<span class="nc" id="L127">            }</span>
+            case 15 -&gt; {
+<span class="nc" id="L129">                CrocodileGroup.create();</span>
+<span class="nc" id="L130">                CrocodileGroup.run();</span>
+<span class="nc" id="L131">            }</span>
+            case 16 -&gt; {
+<span class="nc" id="L133">                DalmatianGroup.create();</span>
+<span class="nc" id="L134">                DalmatianGroup.run();</span>
+<span class="nc" id="L135">            }</span>
+            case 17 -&gt; {
+<span class="nc" id="L137">                DeerGroup.create();</span>
+<span class="nc" id="L138">                DeerGroup.run();</span>
+<span class="nc" id="L139">            }</span>
+            case 18 -&gt; {
+<span class="nc" id="L141">                DinosaurGroup.create();</span>
+<span class="nc" id="L142">                DinosaurGroup.run();</span>
+<span class="nc" id="L143">            }</span>
+            case 19 -&gt; {
+<span class="nc" id="L145">                DuckGroup.create();</span>
+<span class="nc" id="L146">                DuckGroup.run();</span>
+<span class="nc" id="L147">            }</span>
+            case 20 -&gt; {
+<span class="nc" id="L149">                ElephantBirdGroup.create();</span>
+<span class="nc" id="L150">                ElephantBirdGroup.run();</span>
+<span class="nc" id="L151">            }</span>
+            case 21 -&gt; {
+<span class="nc" id="L153">                ElephantGroup.create();</span>
+<span class="nc" id="L154">                ElephantGroup.run();</span>
+<span class="nc" id="L155">            }</span>
+            case 22 -&gt; {
+<span class="nc" id="L157">                EmuGroup.create();</span>
+<span class="nc" id="L158">                EmuGroup.run();</span>
+<span class="nc" id="L159">            }</span>
+            case 23 -&gt; {
+<span class="nc" id="L161">                FerociousTigerGroup.create();</span>
+<span class="nc" id="L162">                FerociousTigerGroup.run();</span>
+<span class="nc" id="L163">            }</span>
+            case 24 -&gt; {
+<span class="nc" id="L165">                FloppyGroup.create();</span>
+<span class="nc" id="L166">                FloppyGroup.run();</span>
+<span class="nc" id="L167">            }</span>
+            case 25 -&gt; {
+<span class="nc" id="L169">                FrogGroup.create();</span>
+<span class="nc" id="L170">                FrogGroup.run();</span>
+<span class="nc" id="L171">            }</span>
+            case 26 -&gt; {
+<span class="nc" id="L173">                GerenukGroup.create();</span>
+<span class="nc" id="L174">                GerenukGroup.run();</span>
+<span class="nc" id="L175">            }</span>
+            case 27 -&gt; {
+<span class="nc" id="L177">                GiraffeGroup.create();</span>
+<span class="nc" id="L178">                GiraffeGroup.run();</span>
+<span class="nc" id="L179">            }</span>
+            case 28 -&gt; {
+<span class="nc" id="L181">                GlyptodonGroup.create();</span>
+<span class="nc" id="L182">                GlyptodonGroup.run();</span>
+<span class="nc" id="L183">            }</span>
+            case 29 -&gt; {
+<span class="nc" id="L185">                GoatGroup.create();</span>
+<span class="nc" id="L186">                GoatGroup.run();</span>
+<span class="nc" id="L187">            }</span>
+            case 30 -&gt; {
+<span class="nc" id="L189">                GriffinGroup.create();</span>
+<span class="nc" id="L190">                GriffinGroup.run();</span>
+<span class="nc" id="L191">            }</span>
+            case 31 -&gt; {
+<span class="nc" id="L193">                HarpSealGroup.create();</span>
+<span class="nc" id="L194">                HarpSealGroup.run();</span>
+<span class="nc" id="L195">            }</span>
+            case 32 -&gt; {
+<span class="nc" id="L197">                HippopotamusGroup.create();</span>
+<span class="nc" id="L198">                HippopotamusGroup.run();</span>
+<span class="nc" id="L199">            }</span>
+            case 33 -&gt; {
+<span class="nc" id="L201">                KangarooGroup.create();</span>
+<span class="nc" id="L202">                KangarooGroup.run();</span>
+<span class="nc" id="L203">            }</span>
+            case 34 -&gt; {
+<span class="nc" id="L205">                KangaroovGroup.create();</span>
+<span class="nc" id="L206">                KangaroovGroup.run();</span>
+<span class="nc" id="L207">            }</span>
+            case 35 -&gt; {
+<span class="nc" id="L209">                KoalaGroup.create();</span>
+<span class="nc" id="L210">                KoalaGroup.run();</span>
+<span class="nc" id="L211">            }</span>
+            case 36 -&gt; {
+<span class="nc" id="L213">                LigerGroup.create();</span>
+<span class="nc" id="L214">                LigerGroup.run();</span>
+<span class="nc" id="L215">            }</span>
+            case 37 -&gt; {
+<span class="nc" id="L217">                LionessGroup.create();</span>
+<span class="nc" id="L218">                LionessGroup.run();</span>
+<span class="nc" id="L219">            }</span>
+            case 38 -&gt; {
+<span class="nc" id="L221">                LionGroup.create();</span>
+<span class="nc" id="L222">                LionGroup.run();</span>
+<span class="nc" id="L223">            }</span>
+            case 39 -&gt; {
+<span class="nc" id="L225">                MightyLionGroup.create();</span>
+<span class="nc" id="L226">                MightyLionGroup.run();</span>
+<span class="nc" id="L227">            }</span>
+            case 40 -&gt; {
+<span class="nc" id="L229">                MuleDeerGroup.create();</span>
+<span class="nc" id="L230">                MuleDeerGroup.run();</span>
+<span class="nc" id="L231">            }</span>
+            case 41 -&gt; {
+<span class="nc" id="L233">                OkapiGroup.create();</span>
+<span class="nc" id="L234">                OkapiGroup.run();</span>
+<span class="nc" id="L235">            }</span>
+            case 42 -&gt; {
+<span class="nc" id="L237">                PandaGroup.create();</span>
+<span class="nc" id="L238">                PandaGroup.run();</span>
+<span class="nc" id="L239">            }</span>
+            case 43 -&gt; {
+<span class="nc" id="L241">                PantheraGroup.create();</span>
+<span class="nc" id="L242">                PantheraGroup.run();</span>
+<span class="nc" id="L243">            }</span>
+            case 44 -&gt; {
+<span class="nc" id="L245">                PolarBearGroup.create();</span>
+<span class="nc" id="L246">                PolarBearGroup.run();</span>
+<span class="nc" id="L247">            }</span>
+            case 45 -&gt; {
+<span class="nc" id="L249">                ProngHornGroup.create();</span>
+<span class="nc" id="L250">                ProngHornGroup.run();</span>
+<span class="nc" id="L251">            }</span>
+            case 46 -&gt; {
+<span class="nc" id="L253">                PumaGroup.create();</span>
+<span class="nc" id="L254">                PumaGroup.run();</span>
+<span class="nc" id="L255">            }</span>
+            case 47 -&gt; {
+<span class="nc" id="L257">                RabbitGroup.create();</span>
+<span class="nc" id="L258">                RabbitGroup.run();</span>
+<span class="nc" id="L259">            }</span>
+            case 48 -&gt; {
+<span class="nc" id="L261">                RelayHorseGroup.create();</span>
+<span class="nc" id="L262">                RelayHorseGroup.run();</span>
+<span class="nc" id="L263">            }</span>
+            case 49 -&gt; {
+<span class="nc" id="L265">                RoaringLionGroup.create();</span>
+<span class="nc" id="L266">                RoaringLionGroup.run();</span>
+<span class="nc" id="L267">            }</span>
+            case 50 -&gt; {
+<span class="nc" id="L269">                ShoebillGroup.create();</span>
+<span class="nc" id="L270">                ShoebillGroup.run();</span>
+<span class="nc" id="L271">            }</span>
+            case 51 -&gt; {
+<span class="nc" id="L273">                SiberianTigerGroup.create();</span>
+<span class="nc" id="L274">                SiberianTigerGroup.run();</span>
+<span class="nc" id="L275">            }</span>
+            case 52 -&gt; {
+<span class="nc" id="L277">                SquirrelGroup.create();</span>
+<span class="nc" id="L278">                SquirrelGroup.run();</span>
+<span class="nc" id="L279">            }</span>
+            case 53 -&gt; {
+<span class="nc" id="L281">                StagGroup.create();</span>
+<span class="nc" id="L282">                StagGroup.run();</span>
+<span class="nc" id="L283">            }</span>
+            case 54 -&gt; {
+<span class="nc" id="L285">                StringRayGroup.create();</span>
+<span class="nc" id="L286">                StringRayGroup.run();</span>
+<span class="nc" id="L287">            }</span>
+            case 55 -&gt; {
+<span class="nc" id="L289">                SunBearGroup.create();</span>
+<span class="nc" id="L290">                SunBearGroup.run();</span>
+<span class="nc" id="L291">            }</span>
+            case 56 -&gt; {
+<span class="nc" id="L293">                TauntingTigerGroup.create();</span>
+<span class="nc" id="L294">                TauntingTigerGroup.run();</span>
+<span class="nc" id="L295">            }</span>
+            case 57 -&gt; {
+<span class="nc" id="L297">                UnicornGroup.create();</span>
+<span class="nc" id="L298">                UnicornGroup.run();</span>
+<span class="nc" id="L299">            }</span>
+            case 58 -&gt; {
+<span class="nc" id="L301">                WalrusGroup.create();</span>
+<span class="nc" id="L302">                WalrusGroup.run();</span>
+<span class="nc" id="L303">            }</span>
+            case 59 -&gt; {
+<span class="nc" id="L305">                XraytetraGroup.create();</span>
+<span class="nc" id="L306">                XraytetraGroup.run();</span>
+<span class="nc" id="L307">            }</span>
+            case 60 -&gt; {
+<span class="nc" id="L309">                YukonMooseGroup.create();</span>
+<span class="nc" id="L310">                YukonMooseGroup.run();</span>
+<span class="nc" id="L311">            }</span>
+            default -&gt; {
+            }
+        }
+
+        // Put things back
+<span class="nc" id="L317">        System.out.flush();</span>
+<span class="nc" id="L318">        System.setOut(old);</span>
+<span class="nc" id="L319">        String stringOutput = newStream.toString();</span>
+<span class="nc" id="L320">        return stringOutput;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Lioness.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Lioness.java</span></div><h1>Lioness.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ * This is lioness class which is extended from Animal Class
+ *
+ * @author Sreebharath Mallampati
+ */
+public class Lioness extends Animal {
+
+<span class="nc" id="L15">    public enum EatableType {</span>
+<span class="nc" id="L16">        Vegeterian,</span>
+<span class="nc" id="L17">        NonVegeterian,</span>
+<span class="nc" id="L18">        Water</span>
+    }
+
+    /**
+     * Constructor
+     *
+     * @author Sreebharath Mallampati
+     */
+    Lioness(String name) {
+<span class="fc" id="L27">        super(name);</span>
+<span class="fc" id="L28">    }</span>
+
+    /**
+     * This is a main method
+     *
+     * @author Sreebharath Mallampati
+     * @param args
+     */
+    public static void main(String[] args) {
+<span class="nc" id="L37">        Lioness lionessObj = new Lioness(&quot;Bharath&quot;);</span>
+<span class="nc" id="L38">        lionessObj.repeatStrings(3, &quot;Hello&quot;);</span>
+<span class="nc" id="L39">        lionessObj.checkRepetition();</span>
+<span class="nc" id="L40">        lionessObj.move();</span>
+<span class="nc" id="L41">        lionessObj.speak();</span>
+<span class="nc" id="L42">        System.out.println(&quot;I eat &quot; + EatableType.NonVegeterian);</span>
+<span class="nc" id="L43">    }</span>
+
+    /**
+     * This is a speak method
+     *
+     * @author Sreebharath Mallampati
+     */
+    @Override
+    public void speak() {
+<span class="fc" id="L52">        System.out.printf(&quot;I'm %s and I belong Lion family.&quot;, this.name);</span>
+<span class="fc" id="L53">    }</span>
+
+    /**
+     * This method is used to print the moving nature
+     *
+     * @author Sreebharath Mallampati
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L62">        System.out.println(&quot;When I move, I hunt, hunt, hunt.\n&quot;);</span>
+<span class="fc" id="L63">    }</span>
+
+    public String repeatStrings(int times, String word) {
+<span class="fc" id="L66">        String result = &quot;&quot;;</span>
+<span class="fc bfc" id="L67" title="All 2 branches covered.">        for (int i = 0; i &lt; times; i++) {</span>
+<span class="fc" id="L68">            result += word;</span>
+        }
+<span class="fc" id="L70">        return result;</span>
+    }
+
+    public String checkRepetition() {
+<span class="fc" id="L74">        String repeatedString = repeatStrings(6, &quot;Check&quot;);</span>
+<span class="fc" id="L75">        System.out.println(repeatedString);</span>
+<span class="fc" id="L76">        return repeatedString;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

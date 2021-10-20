@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SquirrelGroup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">SquirrelGroup.java</span></div><h1>SquirrelGroup.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo04lab;
+import java.util.ArrayList;
+
+/**
+ * SquirrelGroup class demonstrating run and create methods
+ * @author Nithin Reddy Kumbham
+ */
+<span class="nc" id="L8">public class SquirrelGroup {</span>
+
+private static ArrayList&lt;Squirrel&gt; myGroup;
+
+    /**
+     * Create a static group of Squirrel
+     *
+     * @return the number of animals in the group
+     */
+    public static int create() {
+<span class="nc" id="L18">        myGroup = new ArrayList&lt;&gt;();</span>
+        
+<span class="nc" id="L20">        Squirrel a = new Squirrel(&quot;Pinto&quot;);</span>
+<span class="nc" id="L21">        myGroup.add(a);</span>
+<span class="nc" id="L22">        myGroup.add(new Squirrel(&quot;Searel&quot;));</span>
+<span class="nc" id="L23">        myGroup.add(new Squirrel(&quot;Sophie&quot;));</span>
+
+<span class="nc" id="L25">        return myGroup.size();</span>
+    }
+
+    /**
+     * Run (simulate) the group doing things
+     */
+    public static void run() {
+<span class="nc" id="L32">        System.out.println(&quot;*****************************************&quot;);</span>
+<span class="nc" id="L33">        System.out.println(&quot;Hey - look at the Squirrel!&quot;);</span>
+<span class="nc" id="L34">        myGroup.forEach(Squirrel -&gt; {</span>
+<span class="nc" id="L35">            Squirrel.speak();</span>
+<span class="nc" id="L36">            Squirrel.move();</span>
+<span class="nc" id="L37">        });</span>
+<span class="nc" id="L38">        System.out.println(&quot;Nice Squirrel - that was fun!&quot;);</span>
+<span class="nc" id="L39">        System.out.println(&quot;*****************************************&quot;);</span>
+    
+<span class="nc" id="L41">}</span>
+}
+    
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

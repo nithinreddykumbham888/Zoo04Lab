@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Hippopotamus.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Hippopotamus.java</span></div><h1>Hippopotamus.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ *
+ * @author Indu Chinthakuntla
+ */
+public class Hippopotamus extends Animal {
+
+    private String name;
+
+    public Hippopotamus(String name) {
+<span class="fc" id="L17">        super(name);</span>
+
+<span class="fc" id="L19">    }</span>
+
+    @Override
+    public void speak() {
+<span class="fc" id="L23">        System.out.println(&quot;I'm an Hippopotamus!&quot;);</span>
+<span class="fc" id="L24">    }</span>
+
+    @Override
+    public void move() {
+<span class="fc" id="L28">        System.out.println(&quot;When I move, I walk, walk, walk.&quot;);</span>
+<span class="fc" id="L29">    }</span>
+    public void profess() {
+<span class="nc" id="L31">        double a = 2.5;</span>
+<span class="nc" id="L32">        int b = 2;</span>
+<span class="nc" id="L33">        double c = getHippopotamusAddition(a, b);</span>
+<span class="nc" id="L34">        System.out.printf(&quot;I know HippopotamusAddition! %4.2f plus %d is %4.2f \n&quot;, a, b, c);</span>
+<span class="nc" id="L35">    }</span>
+
+    /**
+     * Custom Hippopotamus function - your class must use a unique function name
+     * unique first parameter identifier unique second parameter identifier do
+     * something creative
+     *
+     * @param valueOne double input
+     * @param valueTwo int input
+     * @return double sum
+     */
+    public double getHippopotamusAddition(double valueOne, int valueTwo) {
+<span class="fc" id="L47">        return valueOne + valueTwo;</span>
+    }
+
+    public static void main(String[] args) {
+<span class="nc" id="L51">        var a = new Hippopotamus(&quot;Tester&quot;);</span>
+<span class="nc" id="L52">        a.speak();</span>
+<span class="nc" id="L53">        a.move();</span>
+<span class="nc" id="L54">        a.profess();</span>
+<span class="nc" id="L55">    }</span>
+
+}
+
+
+    
+
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

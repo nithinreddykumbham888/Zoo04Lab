@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>SiberianTigerGroup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">SiberianTigerGroup.java</span></div><h1>SiberianTigerGroup.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo04lab;
+
+import java.util.ArrayList;
+
+/**
+ *
+ * @author Akhil Mulamalla
+ */
+<span class="nc" id="L9">public class SiberianTigerGroup {</span>
+
+    private static ArrayList&lt;SiberianTiger&gt; mySiberianTigerGroup;
+
+    /**
+     * Create a static group of SiberianTiger
+     *
+     * @return the number of animals in the group
+     */
+    public static int create() {
+<span class="nc" id="L19">        mySiberianTigerGroup = new ArrayList&lt;&gt;();</span>
+        
+<span class="nc" id="L21">        SiberianTiger S = new SiberianTiger(&quot;SiberianTiger1&quot;);</span>
+<span class="nc" id="L22">        mySiberianTigerGroup.add(S);</span>
+<span class="nc" id="L23">        mySiberianTigerGroup.add(new SiberianTiger(&quot;SiberianTiger2&quot;));</span>
+<span class="nc" id="L24">        mySiberianTigerGroup.add(new SiberianTiger(&quot;SiberianTiger3&quot;));</span>
+
+<span class="nc" id="L26">        return mySiberianTigerGroup.size();</span>
+    }
+
+    /**
+     * Run (simulate) the group doing things
+     */
+    public static void run() {
+<span class="nc" id="L33">        System.out.println(&quot;TTTTTTTTTTTTTTTTTTT&quot;);</span>
+<span class="nc" id="L34">        System.out.println(&quot;Look at SiberianTiger!&quot;);</span>
+<span class="nc" id="L35">        mySiberianTigerGroup.forEach(SiberianTiger -&gt; {</span>
+<span class="nc" id="L36">            SiberianTiger.speak();</span>
+<span class="nc" id="L37">            SiberianTiger.move();</span>
+<span class="nc" id="L38">            SiberianTiger.eat();</span>
+<span class="nc" id="L39">        });</span>
+<span class="nc" id="L40">        System.out.println(&quot;Nice SiberianTigers - they are cute&quot;);</span>
+<span class="nc" id="L41">        System.out.println(&quot;TTTTTTTTTTTTTTTTTTT&quot;);</span>
+<span class="nc" id="L42">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

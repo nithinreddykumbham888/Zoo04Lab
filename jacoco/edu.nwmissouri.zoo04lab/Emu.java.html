@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Emu.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Emu.java</span></div><h1>Emu.java</h1><pre class="source lang-java linenums">package edu.nwmissouri.zoo04lab;
+
+/**
+ * 
+ *  This documents &quot;ColorsOfLife&quot;
+ * @author S545407
+ */
+<span class="nc" id="L8">enum ColorsOfLife{</span>
+<span class="nc" id="L9">    RED,</span>
+<span class="nc" id="L10">    YELLOW,</span>
+<span class="nc" id="L11">    BLUE,</span>
+<span class="nc" id="L12">    VOILET,</span>
+<span class="nc" id="L13">    GREEN,</span>
+   
+}
+/**
+ * This class defines the nature of the Emu animal
+ * @author Venkata Prabhakar Takkellapati (S545407)
+ */
+public class Emu extends Animal {
+
+    public Emu(String name) {
+<span class="fc" id="L23">        super(name);</span>
+<span class="fc" id="L24">    }</span>
+
+    /**
+     * Determines the animal speak
+     */
+    @Override
+    public void speak() {
+<span class="fc" id="L31">        System.out.printf(&quot;I'm %s. I'm an Emu!&quot;, this.name);</span>
+<span class="fc" id="L32">    }</span>
+
+    /**
+     * Determines the animal move
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L39">        System.out.println(&quot;they've become rare in the wild.&quot;);</span>
+
+<span class="fc" id="L41">    } </span>
+    /**
+     * This method will initialize the values and calls the sum method
+     */
+  public void sumOfTwo() {
+<span class="nc" id="L46">        double p = 7.5;</span>
+<span class="nc" id="L47">        int q = 2;</span>
+<span class="nc" id="L48">        double r = emuSum(p, q);</span>
+<span class="nc" id="L49">        System.out.printf(&quot;I know EmuAddition! %4.2f plus %d is %4.2f \n&quot;, p, q, r);</span>
+<span class="nc" id="L50">    }</span>
+  /**
+   * This method will calculate the sum of two numbers
+   * @param first double value which is passed from sumOfTwo() 
+   * @param second int value which is passed from sumOfTwo()
+   * @return it returns the sum of two numbers
+   */
+public double emuSum(double first, int second) {
+<span class="fc" id="L58">        return first + second;</span>
+    }
+/**
+ * The application's entry point
+ * This is the main method which makes use of sumOfTwo,speak,move method.
+ * @param args an array of command-line arguments for the application
+ */
+    public static void main(String[] args){
+<span class="nc" id="L66">        var emu = new Emu(&quot;Adding&quot;);</span>
+<span class="nc" id="L67">        emu.speak();</span>
+<span class="nc" id="L68">        emu.move();</span>
+<span class="nc" id="L69">        emu.sumOfTwo();</span>
+<span class="nc" id="L70">         System.out.println(&quot;My Favourite Color is : &quot;+ColorsOfLife.YELLOW);</span>
+
+
+<span class="nc" id="L73">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

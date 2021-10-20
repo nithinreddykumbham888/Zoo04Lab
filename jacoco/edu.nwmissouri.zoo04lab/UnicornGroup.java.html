@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>UnicornGroup.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">UnicornGroup.java</span></div><h1>UnicornGroup.java</h1><pre class="source lang-java linenums"> package edu.nwmissouri.zoo04lab;
+
+
+import java.util.ArrayList;
+
+/**
+ * Provides methods to create and run a group of Unicorn
+ *
+ * @author Sujith Reddy
+ */
+<span class="nc" id="L11">public class UnicornGroup {</span>
+
+    private static ArrayList&lt;Unicorn&gt; myUnicornGroup;
+
+    /**
+     * Create a static group of Unicorn
+     *
+     * @return the number of animals in the group
+     */
+    public static int create() {
+<span class="fc" id="L21">        myUnicornGroup = new ArrayList&lt;&gt;();</span>
+        
+<span class="fc" id="L23">        Unicorn p = new Unicorn(&quot;Unicorn1&quot;);</span>
+<span class="fc" id="L24">        myUnicornGroup.add(p);</span>
+<span class="fc" id="L25">        myUnicornGroup.add(new Unicorn(&quot;Unicorn2&quot;));</span>
+<span class="fc" id="L26">        myUnicornGroup.add(new Unicorn(&quot;Unicorn3&quot;));</span>
+
+<span class="fc" id="L28">        return myUnicornGroup.size();</span>
+    }
+
+    /**
+     * Run (simulate) the group doing things
+     */
+    public static void run() {
+<span class="fc" id="L35">        System.out.println(&quot;ooooh&quot;);</span>
+<span class="fc" id="L36">        System.out.println(&quot;unicorn is flying&quot;);</span>
+<span class="fc" id="L37">        myUnicornGroup.forEach(Unicorn -&gt; {</span>
+<span class="fc" id="L38">            Unicorn.speak();</span>
+<span class="fc" id="L39">            Unicorn.move();</span>
+<span class="fc" id="L40">        });</span>
+<span class="fc" id="L41">        System.out.println(&quot;Nice Unicorn - that was superb!&quot;);</span>
+<span class="fc" id="L42">        System.out.println(&quot;go go unicorn&quot;);       </span>
+<span class="fc" id="L43">        System.out.println(&quot;***********************************&quot;);</span>
+
+<span class="fc" id="L45">    }</span>
+
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>

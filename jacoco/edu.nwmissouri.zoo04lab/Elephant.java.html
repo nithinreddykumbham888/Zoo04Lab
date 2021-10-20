@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="en"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>Elephant.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">Zoo04Lab</a> &gt; <a href="index.source.html" class="el_package">edu.nwmissouri.zoo04lab</a> &gt; <span class="el_source">Elephant.java</span></div><h1>Elephant.java</h1><pre class="source lang-java linenums">/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package edu.nwmissouri.zoo04lab;
+
+/**
+ * This shows &quot;Super plant&quot;
+ *
+ * @author Homakesavadurgaprasad OMTRI (S544929)
+ */
+<span class="nc" id="L13">enum SuperPlanet {</span>
+<span class="nc" id="L14">    EARTH,</span>
+<span class="nc" id="L15">    JUPITER,</span>
+<span class="nc" id="L16">    VENUS,</span>
+<span class="nc" id="L17">    NEPTUNE,</span>
+<span class="nc" id="L18">    URANUS,</span>
+
+}
+
+/**
+ * This class defines the nature of the Elephant animal
+ */
+public class Elephant extends Animal {
+
+    /**
+     * This method is used to get the string from the parent class
+     *
+     * @param name Elephant
+     */
+    public Elephant(String name) {
+<span class="fc" id="L33">        super(name);</span>
+<span class="fc" id="L34">    }</span>
+
+    /**
+     * This is used to print animal speak
+     *
+     */
+    @Override
+    public void speak() {
+<span class="fc" id="L42">        System.out.printf(&quot; I'm %s.I'm an Elephant!&quot;, this.name);</span>
+<span class="fc" id="L43">    }</span>
+
+    /**
+     * This is used to print animal move
+     *
+     */
+    @Override
+    public void move() {
+<span class="fc" id="L51">        System.out.println(&quot; I could not able to swim in water but would like to walk!. &quot;);</span>
+<span class="fc" id="L52">    }</span>
+
+    /**
+     * This method will initialize the values and calls the sum method
+     */
+    public void profess() {
+<span class="nc" id="L58">        double a = 2.5;</span>
+<span class="nc" id="L59">        int b = 5;</span>
+<span class="nc" id="L60">        double c = getElephantAddition(a, b);</span>
+<span class="nc" id="L61">        System.out.printf(&quot;I know ElephantAddition! %4.2f plus %d is %4.2f \n&quot;, a, b, c);</span>
+<span class="nc" id="L62">    }</span>
+
+    /**
+     * This method will calculate the sum of two numbers
+     *
+     * @param valueOne which is used to pass value of one in addition
+     * @param valueTwo which is used to pass value of two in addition
+     * @return it returns the sum of two numbers
+     */
+    public double getElephantAddition(double valueOne, int valueTwo) {
+<span class="fc" id="L72">        return valueOne + valueTwo;</span>
+    }
+
+    /**
+     * The application's entry point This is the main method which makes use of
+     * profess,speak,move method.
+     *
+     * @param args an array of command-line arguments for the application
+     */
+    public static void main(String[] args) {
+<span class="nc" id="L82">        Elephant Tommy = new Elephant(&quot;Tommy&quot;);</span>
+<span class="nc" id="L83">        Tommy.speak();</span>
+<span class="nc" id="L84">        Tommy.move();</span>
+<span class="nc" id="L85">        Tommy.profess();</span>
+
+<span class="nc" id="L87">        System.out.println(&quot;My Super Planet is :&quot; + SuperPlanet.EARTH);</span>
+
+<span class="nc" id="L89">    }</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.7.202105040129</span></div></body></html>
