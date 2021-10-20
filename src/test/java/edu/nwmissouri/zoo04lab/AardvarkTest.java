@@ -3,11 +3,8 @@ package edu.nwmissouri.zoo04lab;
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
 
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.AfterAll;
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -19,24 +16,9 @@ public class AardvarkTest {
 
     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
 
-    public AardvarkTest() {
-    }
-
-    @BeforeAll
-    public static void setUpClass() {
-    }
-
-    @AfterAll
-    public static void tearDownClass() {
-    }
-
     @BeforeEach
     public void setUp() {
         System.setOut(new PrintStream(outputStreamCaptor));
-    }
-
-    @AfterEach
-    public void tearDown() {
     }
 
     /**
@@ -74,7 +56,7 @@ public class AardvarkTest {
      */
     @Test
     public void testAardvarkAddition() throws Exception {
-        
+
         // set up test, figure out expected by hand
         double first = 5.0;
         int second = 10;
@@ -84,7 +66,6 @@ public class AardvarkTest {
         var aardvark = new Aardvark("Allie");
         double actual = aardvark.getAardvarkAddition(first, second);
 
-        // assertEquals(expected, actual);
         assertEquals(expected, actual);
     }
 
