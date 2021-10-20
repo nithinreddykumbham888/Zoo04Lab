@@ -46,7 +46,7 @@ public class MightyLionTest {
      */
     @Test
     public void testSpeak() throws Exception {
-        String expected = "I am cango Lion.I will roar.";
+        String expected = "I am cango Lion. I will roar.";
         var mightyLion = new MightyLion("cango");
         mightyLion.speak();
         String actual = outputStreamCaptor.toString().trim();
