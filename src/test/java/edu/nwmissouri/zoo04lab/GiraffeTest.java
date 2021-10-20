@@ -71,7 +71,7 @@ public class GiraffeTest {
     }
     
     /**
-     * Test custom function ardvarkAddition()
+     * Test custom function GiraffeMultiplication()
      *
      * @throws Exception
      */
@@ -81,7 +81,7 @@ public class GiraffeTest {
         // set up test, figure out expected by hand
         double first = 5.0;
         int second = 10;
-        double expected = 15.0;
+        double expected =50.0;
 
         // call function to get the actual
         var giraffe = new Giraffe("Spike");
