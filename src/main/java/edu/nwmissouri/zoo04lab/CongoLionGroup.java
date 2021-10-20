@@ -3,7 +3,7 @@ package edu.nwmissouri.zoo04lab;
 import java.util.ArrayList;
 
 /**
- *
+ * Provides methods to create and run a group of CongoLions
  * @author Akshay krishna kintali
  */
 public class CongoLionGroup {

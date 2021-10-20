@@ -6,7 +6,7 @@
 package edu.nwmissouri.zoo04lab;
 
 /**
- *
+ * CongoLion class is derived from class animal
  * @author Akshay krishna kintali
  * 
  */
