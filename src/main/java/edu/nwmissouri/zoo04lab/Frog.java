@@ -78,10 +78,21 @@ public class Frog extends Animal {
     {
         System.out.println("lives upto 10-12 years");
     }
+    /**
+     * 
+     * @param DOB
+     * DOB parameter
+     * @param cuy
+     * current age parameter
+     * @return 
+     */
     public int age(int DOB,int cuy)
     {
         return cuy-DOB;
     }
+    /**
+     * returns agec method
+     */
     public void agec(){
         System.out.println("Frog age: "+age(1999,2021));
     }

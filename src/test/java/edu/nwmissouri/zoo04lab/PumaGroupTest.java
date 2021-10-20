@@ -14,7 +14,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  *
- * @author Sai Kaushik Beeram(S545124)
+ * @author Sai Kaushik Beeram (S545124)
  */
 public class PumaGroupTest {
     public PumaGroupTest() {

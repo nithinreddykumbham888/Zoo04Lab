@@ -3,7 +3,7 @@ package edu.nwmissouri.zoo04lab;
 import java.util.ArrayList;
 
 /**
- *
+ *Provide methods to create and run a group of Abyssinian
  * @author Vamsi krishna Areti (S544902)
  */
 
@@ -35,6 +35,9 @@ private static ArrayList<Abyssinian> myGroup;
         myGroup.forEach(abyssinian -> {
             abyssinian.speak();
             abyssinian.move();
+            abyssinian.eat();
+            abyssinian.visible();
+            abyssinian.breed();
         });
         System.out.println("Nice Abyssinian - that was fun!");
         System.out.println("*****************************************");

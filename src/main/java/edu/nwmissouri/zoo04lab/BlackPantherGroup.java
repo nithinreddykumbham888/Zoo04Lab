@@ -7,7 +7,7 @@ import java.util.ArrayList;
  * @author Hemanth Sai Reddy Velamuri
  */
 public class BlackPantherGroup {
-    
+
     private static ArrayList<BlackPanther> myGroup;
 
     /**
@@ -17,7 +17,7 @@ public class BlackPantherGroup {
      */
     public static int create() {
         myGroup = new ArrayList<>();
-        
+
        BlackPanther a = new BlackPanther("Nikhil");
         myGroup.add(a);
         myGroup.add(new BlackPanther("Jack"));
@@ -39,5 +39,5 @@ public class BlackPantherGroup {
         System.out.println("Nice BlackPanther - that was fun!");
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
     }
-    
+
 }

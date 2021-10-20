@@ -9,14 +9,20 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 
 /**
- *
- * @author S545400
+ *This class tests FrogGroup
+ * @author Manoj Kota
  */
 public class FrogGroupTest {
     
+    /**
+     *Frog test group
+     */
     public FrogGroupTest() {
     }
     
+    /**
+     *set up group
+     */
     @BeforeEach
     public void setUp() {
     }
@@ -30,6 +36,7 @@ public class FrogGroupTest {
 
     /**
      * Test of run method, of class FrogGroup.
+     * @throws java.lang.Exception
      */
     @Test
     public void testRun() throws Exception {

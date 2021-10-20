@@ -6,10 +6,20 @@
 package edu.nwmissouri.zoo04lab;
 
 /**
- *
- * @author Saitej Veerabathini
+ * FerociousTiger class extends from parent class Animal
+ * 
+ * @author Saitej Veerabathini 
  */
 public class FerociousTiger extends Animal{
+    
+    /**
+     * Enumerator class for Color of FerociousTiger
+     */
+    enum Color {
+        White,
+        Gold,
+        Black
+    }
     
     /***
      * Constructor for FerociousTiger
@@ -35,7 +45,48 @@ public class FerociousTiger extends Animal{
         System.out.println("I move on 4 legs");
     }
     
+    /**
+     * Type method of FerociousTiger
+     */
+     public void type() {
+        System.out.println("I'm a Carnivore animal");
+    }
+     
+     /**
+      * Lifespan method of FerociousTiger
+      */
+     public void lifespan(){
+         System.out.println("I live upto 8-10 years");
+     }
+    
+     /**
+      * Family method of FerociousTiger
+      */
+     public void family(){
+         System.out.println("I belong to Felidae famly");
+     }
+     
+     public int getTotalSleep(int a, int b){
+         return a+b;
+     }
+     
+     public void sleep(){
+         int morningSleep_hr = 2;
+         int eveningSleep_hr = 10;
+         int totalSleep_hr = getTotalSleep(morningSleep_hr,eveningSleep_hr);
+         System.out.println("I am "+this.name+", I am a Ferocious Tiger. I sleep "+totalSleep_hr+" hours per day");
+     }
    
+     public static void main(String[] args){
+         FerociousTiger ft = new FerociousTiger("Ron");
+         ft.speak();
+         ft.move();
+         ft.family();
+         ft.type();
+         ft.lifespan();
+         ft.sleep();
+         System.out.println("I'm a "+Color.White+" Tiger");
+     }
 
     
 }

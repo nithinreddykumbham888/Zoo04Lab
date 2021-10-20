@@ -42,14 +42,39 @@ public class Rabbit extends Animal {
     public void color() {
         System.out.println("I can be White or Brown!!");
     }
-     public static void main(String[] args){
+  
+    public void cal() {
+        double m = 4.0;
+        int n = 2;
+        double o = getRabbitAdd(m, n);
+        System.out.printf("I know RabbitAddition! %4.2f plus %d is %4.2f \n", m, n, o);
+    }
+
+    public double getRabbitAdd(double m, int n) {
+
+        return m + n;
+    }
+
+   
+    public enum FoodHabits {
+        CARNIVORES,
+        HERBIVORES,
+        OMNIVORES,
+        OTHERS;
+
+    }
+
+    public static void main(String[] args) {
         var par = new Rabbit("Keerthana");
         par.speak();
         par.move();
         par.favfood();
         par.skintype();
         par.color();
-        
-        
+        par.cal();
+        for (FoodHabits foodhabit : FoodHabits.values()) {
+            System.out.println(foodhabit);
+        }
+
     }
 }

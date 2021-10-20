@@ -3,7 +3,7 @@ package edu.nwmissouri.zoo04lab;
 import java.util.ArrayList;
 
 /**
- *
+ * Provides methods to create and run a group of CongoLions
  * @author Akshay krishna kintali
  */
 public class CongoLionGroup {
@@ -35,6 +35,8 @@ public class CongoLionGroup {
         myGroup.forEach(CongoLion -> {
             CongoLion.speak();
             CongoLion.move();
+            CongoLion.name("akshay","kintali");
+            CongoLion.display();
         });
         System.out.println("Nice CongoLion - that was fun!");
         System.out.println("*****************************************");

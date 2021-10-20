@@ -15,7 +15,21 @@
 
 - Explore API at <https://denisecase.github.io/Zoo04Lab/edu/nwmissouri/zoo04lab/package-summary.html>
 
+## Test Coverage
+
+- Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
+
 -----
+
+## Web App
+
+A user interface (besides the console) would be nice. 
+We voted on a web front end.
+
+```Bash
+$ mvn clean package spring-boot:repackage
+$ java -jar target/Zoo04Lab-1.0-SNAPSHOT
+```
 
 ## Keep Current - Upgrade to Java 17
 

@@ -47,11 +47,8 @@ public class Floppy extends Animal {
     }
 
     /**
-     ** Custom confess function
+     * confess function
      *
-     * @param valueOne double input
-     * @param valueTwo int input
-     * 
      */
     public void confess() {
         double a = 3.5;
@@ -63,16 +60,16 @@ public class Floppy extends Animal {
     /**
      * Custom getFloppyAddtion function 
      *
-     * @param valueOne double input
-     * @param valueTwo int input
-     * @return double sum
+     * @param valueOne 
+     * @param valueTwo 
+     * @return double - sum of two values
      */
     public double getFloppyAddition(double valueOne, int valueTwo) {
         return valueOne + valueTwo;
     }
     
     /**
-     * Enum function with plant values
+     * @return enum - enum function with plant values
      * 
      */
     public enum Planet {

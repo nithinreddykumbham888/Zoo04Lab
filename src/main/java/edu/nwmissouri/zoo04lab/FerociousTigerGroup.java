@@ -4,14 +4,15 @@ import java.util.ArrayList;
 
 
 /**
- *
+ * * Provides methods to create and run a group of Aardvarks
+ * 
  * @author Saitej Veerabathini
  */
 public class FerociousTigerGroup {
     private static ArrayList<FerociousTiger> myGroup;
 
     /**
-     * Create a static group of Aardvarks
+     * Create a static group of FerociousTiger
      *
      * @return the number of animals in the group
      */
@@ -35,6 +36,10 @@ public class FerociousTigerGroup {
         myGroup.forEach(aardvark -> {
             aardvark.speak();
             aardvark.move();
+            aardvark.family();
+            aardvark.lifespan();
+            aardvark.sleep();
+            aardvark.type();
         });
         System.out.println("Nice aardvarks - that was fun!");
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");

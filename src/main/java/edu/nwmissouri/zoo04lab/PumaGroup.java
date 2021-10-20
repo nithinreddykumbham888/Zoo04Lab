@@ -3,7 +3,7 @@ package edu.nwmissouri.zoo04lab;
 import java.util.ArrayList;
 
 /**
- *
+ *This class defines PumaGroup
  * @author Sai Kaushik Beeram (S545124)
  */
 public class PumaGroup {

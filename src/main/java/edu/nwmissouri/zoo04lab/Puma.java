@@ -2,9 +2,9 @@ package edu.nwmissouri.zoo04lab;
 
 /**
  * This document is color of car
- * @author Sai Kaushik Beeram(S545124)
+ * @author Sai Kaushik Beeram (S545124)
  */
-enum ColorsOfcar{
+enum colorsOfcar{
     RED,
     YELLOW,
     BLUE,
@@ -65,7 +65,7 @@ public class Puma extends Animal {
         a.speak();
         a.move();
         a.calculation();
-        System.out.println("My favorite car color :"+ColorsOfcar.BLUE);
+        System.out.println("My favorite car color :"+colorsOfcar.BLUE);
     }
 
     double getPumacalculation(double first, int second) {

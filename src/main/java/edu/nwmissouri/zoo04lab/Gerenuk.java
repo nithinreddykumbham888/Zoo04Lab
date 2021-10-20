@@ -5,14 +5,7 @@
  */
 package edu.nwmissouri.zoo04lab;
 
-enum Places{
-    KERALA,
-    DELHI,
-    MANALI,
-    HYDERABAD,
-    CHENNAI,
-   
-}
+
 /**
  * Gerenuk class (derived subclass of the superclass Animal)
  *
@@ -67,12 +60,32 @@ public class Gerenuk extends Animal {
     public double getGerenukAddition(double valueOne, int valueTwo) {
         return valueOne + valueTwo;
     }
+    /**
+     * enum function with plant values
+     * 
+     */
+    public enum Gender {
+        Male,
+        Female,
+        Other,
+    }
+
+    /**
+     * Main method
+     * @param args 
+     */
+
      public static void main(String[] args) {
         var a = new Gerenuk("Tester");
         a.speak();
         a.move();
+         a.size();
+         a.place();
         a.profess();
-        System.out.println("My favourite place is "+Places.HYDERABAD);
+         for(Gender gender : Gender.values())
+         {
+        System.out.println(gender);
      }
     
-    }
+     }
+}

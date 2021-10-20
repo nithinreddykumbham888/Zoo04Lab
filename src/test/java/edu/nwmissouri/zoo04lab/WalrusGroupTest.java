@@ -15,7 +15,8 @@ import static org.junit.jupiter.api.Assertions.*;
 /**
  * Test Walrus Group.
  * 
- * @Rehaman_Naguru_Abdur
+ * 
+ * @Rehaman Naguru Abdur
  */
 public class WalrusGroupTest {
 
@@ -59,3 +60,4 @@ public class WalrusGroupTest {
     }
 
 }
+

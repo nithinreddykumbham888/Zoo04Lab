@@ -41,13 +41,12 @@ public class WalrusTest {
 
     /**
      * Test speak method, of class Walrus.
-     *
      * @throws java.lang.Exception
      */
     @Test
     public void testSpeak() throws Exception {
         String expected = "I'm walrus, I growls, taps and make bell-like sounds below water.";
-        var walrus = new Walrus("Wal");
+        var walrus = new Walrus("Wally");
         walrus.speak();
         String actual = outputStreamCaptor.toString().trim();
         assertEquals(expected, actual);
@@ -56,20 +55,41 @@ public class WalrusTest {
     /**
      * Test move method, of class Walrus.
      *
+     * 
      * @throws java.lang.Exception
      */
     @Test
     public void testMove() throws Exception {
-        String expected = "When I move, I walk, walk, walk.";
-        var walrus = new Walrus("Allie");
+        String expected = "I move move and run";
+        var walrus = new Walrus("Wal");
         walrus.move();
         String actual = outputStreamCaptor.toString().trim();
         assertEquals(expected, actual);
     }
+    
+    @Test
+    public void testintro() throws Exception {
+        String expected = "I'm an Walrus";
+        var walrus = new Walrus("Wal");
+        walrus.intro();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
+    }
+    
+     @Test
+    public void testabout() throws Exception {
+        String expected = "I am a sea animal";
+        var walrus = new Walrus("Wal");
+        walrus.about();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
+    }
+    
 
     /**
      * Test custom function walrusAddition()
      *
+     * 
      * @throws Exception
      */
     @Test
@@ -82,7 +102,7 @@ public class WalrusTest {
 
         // call function to get the actual
         var walrus = new Walrus("Wal");
-        double actual = Walrus.getWalrusAddition(first, second);
+        double actual = walrus.getWalrusAddition(first, second);
 
         // assertEquals(expected, actual);
         assertEquals(expected, actual);
