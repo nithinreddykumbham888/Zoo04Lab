@@ -3,7 +3,7 @@ package edu.nwmissouri.zoo04lab;
 import java.util.ArrayList;
 
 /**
- *
+ *Provide methods to create and run a group of Abyssinian
  * @author Vamsi krishna Areti (S544902)
  */
 
