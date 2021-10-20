@@ -7,7 +7,7 @@ package edu.nwmissouri.zoo04lab;
 
 /**
  *
- * @author RevanthPagilla
+ * @author Revanth Pagilla
  */
 public class Liger extends Animal {
     /**
@@ -21,12 +21,12 @@ public class Liger extends Animal {
 
     @Override
     public void move() {
-        System.out.println("I will climb trees ");
+        System.out.println("When I move, I walk, walk, walk.");
     }
 
     @Override
     public void speak() {
-         System.out.printf("I roar very loudly! \n", this.name);
+         System.out.printf("I roar loud. I'm an Liger! \n", this.name);
     }
     
     
@@ -35,9 +35,6 @@ public class Liger extends Animal {
     }
      
     /**
-     * Custom Liger function - your class must use a unique function name
-     * unique first parameter identifier unique second parameter identifier do
-     * something creative
      *
      * @param valueOne double input
      * @param valueTwo int input
