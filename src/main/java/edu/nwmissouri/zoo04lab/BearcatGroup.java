@@ -39,8 +39,7 @@ public class BearcatGroup {
             bearcat.breed();
             bearcat.cal();
             System.out.println("Please enter OccurPlace of "+bearcat.name+" from enum values of INDIA, NEPAL, BANGLADESH");
-            occurFrom pl = occurFrom.valueOf(s.nextLine()) ;
-            System.out.println("Bearcat "+bearcat.name+" from "+pl);
+            System.out.println("Bearcat "+bearcat.name+" from "+occurFrom.BANGLADESH);
         }
 
         System.out.println("Nice bearcat - that was fun!");
