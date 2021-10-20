@@ -6,7 +6,7 @@
 package edu.nwmissouri.zoo04lab;
 
 /**
- *
+ * BengalTiger class (derived subclass of the superclass Animal)
  * @author vamsibhogireddy
  */
 public class BengalTiger extends Animal{
