@@ -38,7 +38,7 @@ public class KangarooGroup {
             kangaroo.region();
             kangaroo.calc();
             System.out.println("Please enter the type of enum value of July, August, September");
-            Calender v=Calender.valueOf(s.nextLine());
+            Calender v=Calender.August;
             System.out.println("Kangaroo "+kangaroo.name+" from "+v);
         }
 
