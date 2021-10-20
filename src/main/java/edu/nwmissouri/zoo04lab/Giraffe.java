@@ -47,8 +47,8 @@ public class Giraffe extends Animal {
     /**
      * Custom Giraffe function 
      *
-     * @param valueOne double input
-     * @param valueTwo int input
+     * @param leg1 double input
+     * @param leg2 int input
      * @return double sum
      */
     public double getGiraffeMultiplication(double leg1, int leg2) {
