@@ -36,6 +36,8 @@ public class DalmatianGroup {
         myGroup.forEach(Dalmatian -> {
             Dalmatian.speak();
             Dalmatian.move();
+            Dalmatian.eat();
+            Dalmatian.cal();
         });
         System.out.println("Nice Dalmatian - that was fun!");
         System.out.println("*****************************************");
