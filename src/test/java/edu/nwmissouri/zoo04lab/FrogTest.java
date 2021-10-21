@@ -119,7 +119,7 @@ public class FrogTest {
     public void testAgec() throws Exception{
         int expected = 22;
         var Frog = new Frog("cold");
-        int actual=2021-1999;
+        int actual=2022-2000;
         
         assertEquals(expected, actual);
     }
