@@ -1,57 +1,72 @@
 package edu.nwmissouri.zoo04lab;
 
-import org.junit.jupiter.api.Test;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
+
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 /**
+ * Test Dalmatian using JUnit5
  *
  * @author Nikhil Porika
  */
 public class DalmatianTest {
 
-    public DalmatianTest() {
+    private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
+
+    @BeforeEach
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
     }
 
     /**
-     * Test of speak method, of class Dalmatian.
+     * Test speak method, of class Dalmatian.
+     *
+     * @throws java.lang.Exception
      */
     @Test
-    public void testSpeak() {
+    public void testSpeak() throws Exception {
+        String expected = "I am Dalmatian,I can speak";
+        var dalmatian = new Dalmatian("Rolly");
+        dalmatian.speak();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
     }
 
     /**
-     * Test of move method, of class Dalmatian.
+     * Test move method, of class Dalmatian.
+     *
+     * @throws java.lang.Exception
      */
     @Test
-    public void testMove() {
+    public void testMove() throws Exception {
+        String expected = "I am Dalmatian,I can run, run , run";
+        var dalmatian = new Dalmatian("Rolly");
+        dalmatian.move();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
     }
 
     /**
-     * Test of eat method, of class Dalmatian.
+     * Test custom function DalmatianAddition()
+     *
+     * @throws Exception
      */
     @Test
-    public void testEat() {
-    }
+    public void testDalmatianAddition() throws Exception {
 
-    /**
-     * Test of cal method, of class Dalmatian.
-     */
-    @Test
-    public void testCal() {
-    }
+        // set up test, figure out expected by hand
+        double first = 5.0;
+        int second = 10;
+        double expected = 15.0;
 
-    /**
-     * Test of addition method, of class Dalmatian.
-     */
-    @Test
-    public void testAddition() {
-    }
+        // call function to get the actual
+        var dalmatian = new Dalmatian("Rolly");
+        double actual = dalmatian.getDalmatianaddition(first, second);
 
-    /**
-     * Test of main method, of class Dalmatian.
-     */
-    @Test
-    public void testMain() {
+        assertEquals(expected, actual);
     }
 
 }
