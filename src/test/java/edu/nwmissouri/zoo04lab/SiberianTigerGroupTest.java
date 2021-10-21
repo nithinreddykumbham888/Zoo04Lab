@@ -1,6 +1,9 @@
 package edu.nwmissouri.zoo04lab;
 
 import java.util.ArrayList;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.Test;
 
 /**
  *
@@ -8,36 +11,24 @@ import java.util.ArrayList;
  */
 public class SiberianTigerGroupTest {
 
-    private static ArrayList<SiberianTigerTest> mySiberianTigerGroup;
-
-    /**
-     * Create a static group of SiberianTigerTest
-     *
-     * @return the number of animals in the group
+   /**
+     * Test of create method, of class SunBearGroup.
      */
-    public static int create() {
-        mySiberianTigerGroup = new ArrayList<>();
-        
-        SiberianTigerTest S = new SiberianTigerTest("SiberianTiger1");
-        mySiberianTigerGroup.add(S);
-        mySiberianTigerGroup.add(new SiberianTigerTest("SiberianTiger2"));
-        mySiberianTigerGroup.add(new SiberianTigerTest("SiberianTiger3"));
-
-        return mySiberianTigerGroup.size();
+    @Test
+    public void testGroupCreate() {
+        int expectedSize = 3;
+        int actualSize = SunBearGroup.create();
+        assertEquals(expectedSize, actualSize);
     }
 
     /**
-     * Run (simulate) the group doing things
+     * Test of run method, of class SunBearGroup.
      */
-    public static void run() {
-        System.out.println("TTTTTTTTTTTTTTTTTTT");
-        System.out.println("Look at SiberianTiger!");
-        mySiberianTigerGroup.forEach(SiberianTiger -> {
-            SiberianTiger.speak();
-            SiberianTiger.move();
-        });
-        System.out.println("Nice SiberianTigers - they are cute");
-        System.out.println("TTTTTTTTTTTTTTTTTTT");
+    @Test
+    public void testGroupRun() {
+        SunBearGroup.create();
+        SunBearGroup.run();
+        assertTrue(true);
     }
 
 }

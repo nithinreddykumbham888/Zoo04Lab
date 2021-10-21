@@ -2,39 +2,31 @@ package edu.nwmissouri.zoo04lab;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import org.junit.jupiter.api.Test;
+import org.junit.jupiter.params.ParameterizedTest;
 
 /**
  *
  * @author Mulamalla Akhil Kumar Reddy
  * 
  */
-public class SiberianTigerTest extends Animal{
-    
-    /**
-     * This is a constructor
-     * @String name
-     */
-    public SiberianTigerTest (String name){
-        super(name);
-    }
+public class SiberianTigerTest {
     
     /*thi is roar method*/
-    @Override
+    @Test
     public  void speak() {
-        System.out.println("I'm a Tiger, my roar can be heard as far as 1.8 miles (3 km) away");
+        assert(true);
     }
 
     /*this is Run method*/
-    @Override
+    @Test
     public void move()  {
-                
+        assert(true);
     }
     @Test
-    public void test(){
+    public void ParameterizedTest() throws Exception{
          System.out.println("I can Run 80 kilometers per hour (km/h)");
         int actual=4;
         int a=4;
         assertEquals(a,actual);
-
     }
     }
