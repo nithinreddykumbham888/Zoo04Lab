@@ -25,7 +25,7 @@ public class Abyssinian extends Animal {
     @Override
    public void speak()
     {
-        System.out.println("I'm Abyssinia.");
+        System.out.println("I'm Abyssinian.");
     }
    //overriding the eat method
    
