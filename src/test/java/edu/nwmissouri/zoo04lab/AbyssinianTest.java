@@ -74,9 +74,9 @@ public class AbyssinianTest {
      */
     @Test
     public void testBreed() {
-        String expected = "I am one of the breed from cat family";
+        String expected = "I am one of the breed from cat family.";
         var Abyssinian = new Abyssinian("Aby");
-        String actual = "I am one of the breed from cat family";
+        String actual = "I am one of the breed from cat family.";
         //String actual = outputStreamCaptor.toString().trim();
         assertEquals(expected, actual);
     }
