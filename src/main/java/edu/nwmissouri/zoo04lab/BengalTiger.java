@@ -38,6 +38,28 @@ public class BengalTiger extends Animal{
     {
         System.out.println("My existence is in many locations in the world");
     }
-
+    /**
+     * 
+     * @param a
+     * @param b
+     * @return 
+     * returns integer
+     */
+    public int per(int a,int b){
+        return 2*(a+b);
+    }
+    /**
+     * perimeter of solid
+     */
+    public void perimeter(){
+        System.out.println("perimeter"+per(1,2));
+    }
+public static void main(String[] args){
+    BengalTiger b=new BengalTiger("Tiger");
+    b.speak();
+    b.move();
+    b.place();
+    b.perimeter();
+}
     
 }

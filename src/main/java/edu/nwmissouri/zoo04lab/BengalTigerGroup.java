@@ -36,6 +36,8 @@ public class BengalTigerGroup {
         myGroup.forEach(BengalTiger -> {
             BengalTiger.speak();
             BengalTiger.move();
+            BengalTiger.perimeter();
+
         });
         System.out.println("Nice BengalTiger - that was fun!");
         System.out.println("AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA");
