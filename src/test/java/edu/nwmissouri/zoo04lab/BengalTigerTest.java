@@ -4,30 +4,52 @@
  */
 package edu.nwmissouri.zoo04lab;
 
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.BeforeEach;
 
 /**
  *
  * @author S545411
  */
 public class BengalTigerTest {
+     private final ByteArrayOutputStream outputStreamCaptor = new ByteArrayOutputStream();
     
     public BengalTigerTest() {
     }
+    @BeforeEach
+    public void setUp() {
+        System.setOut(new PrintStream(outputStreamCaptor));
+    }
+
+
 
     /**
      * Test of speak method, of class BengalTiger.
      */
     @Test
     public void testSpeak() {
-    }
+         String expected = "My name is Tiger.";
+        var BengalTiger = new BengalTiger("Tiger");
+        BengalTiger.speak();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
+
+             }
 
     /**
      * Test of move method, of class BengalTiger.
      */
     @Test
     public void testMove() {
+        String expected ="I am one of the strongest animal in the world and move with four legs";
+        var BengalTiger = new BengalTiger("Tiger");
+        BengalTiger.move();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
+       
     }
 
     /**
@@ -35,6 +57,12 @@ public class BengalTigerTest {
      */
     @Test
     public void testPlace() {
+        String expected = "My existence is in many locations in the world";
+        var BengalTiger = new BengalTiger("Tiger");
+        BengalTiger.place();
+        String actual = outputStreamCaptor.toString().trim();
+        assertEquals(expected, actual);
+       
     }
 
     /**
