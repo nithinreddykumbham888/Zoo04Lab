@@ -14,10 +14,14 @@
 ## API
 
 - Explore API at <https://denisecase.github.io/Zoo04Lab/edu/nwmissouri/zoo04lab/package-summary.html>
+- Generate API with `mvn javadoc:javadoc`
 
 ## Test Coverage
 
 - Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
+- Prepare test results with `mvn clean jacoco:prepare-agent install`
+- Prepare coverage site with `mvn jacoco:report` 
+- This builds target/site/jacoco which is then copied to the hosted repo above.
 
 -----
 
