@@ -33,18 +33,14 @@ public abstract class Animal {
     }
 
     /**
-     * speak() - general method for animal utterance
+     * abstract speak() - has no implementation
      */
-    public void speak() {
-        System.out.println("Generic animal sound");
-    }
+    public abstract void speak();
 
     /**
-     * move() - general method for animal movement
+     * abstract move() - has no implementation
      */
-    public void move() {
-        System.out.println("Generic animal movement");
-    }
+    public abstract void move();
 
     /**
      * Get animal's name.

@@ -5,7 +5,7 @@ package edu.nwmissouri.zoo04lab;
  *
  * @author Dr. Case
  */
-public class Aardvark extends Animal {
+public class Aardvark extends Animal implements Runnable {
 
     /**
      * Aardvark constructor
@@ -51,6 +51,17 @@ public class Aardvark extends Animal {
         a.speak();
         a.move();
         a.profess();
+    }
+
+    /**
+     * An instance of an Aardvark is now Runnable - 
+     * call this run() method to see all the Aardvark tricks.
+     */
+    @Override
+    public void run() {
+        this.speak();
+        this.move();
+        this.profess();
     }
 
 }
