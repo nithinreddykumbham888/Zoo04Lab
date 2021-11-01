@@ -4,6 +4,6 @@ package edu.nwmissouri.zoo04lab;
  *
  * @author Denise Case
  */
-public class AbstractRide {
+public abstract class AbstractRide implements Runnable {
     
 }
