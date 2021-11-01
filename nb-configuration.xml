@@ -21,5 +21,6 @@ Any value defined here will override the pom.xml file value but is only applicab
         <word>Initializr</word>
         <word>io</word>
         <word>localhost</word>
+        <word>src</word>
     </spellchecker-wordlist>
 </project-shared-configuration>
