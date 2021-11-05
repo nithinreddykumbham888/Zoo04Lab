@@ -13,6 +13,7 @@ public abstract class Animal {
      * protected - only subclasses can use it.
      */
     protected String name = "no name";
+    
 
     /**
      * Animals have an associated gender which may be unknown.
