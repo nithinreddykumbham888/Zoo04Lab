@@ -19,6 +19,8 @@
 ## Test Coverage
 
 - Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
+
+Open Powershell Here as Admininstrator in your root project folder (the one with pom.xml):
 - Prepare test results with `mvn clean jacoco:prepare-agent install`
 - Prepare coverage site with `mvn jacoco:report` 
 - This builds target/site/jacoco which is then copied to the hosted repo above.
