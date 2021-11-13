@@ -20,6 +20,16 @@
 
 - Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
 
+Test coverage report is hosted from a separate repo. 
+
+- Create a new test reporting repo in the cloud. Settings / GitHub Pages / set to publish. 
+- Clone this reporting repo down to your machine. 
+- Generate the report from this project repo on your machine using the commands below. 
+- Manually copy all files in the project target/site/jacoco folder into the root directory of this new reporting repo. 
+- Git add & commit, then git push the files up to the cloud reporting repo. 
+
+Regenerate results periodically.
+
 Open Powershell Here as Admininstrator in your root project folder (the one with pom.xml):
 - Prepare test results with `mvn clean jacoco:prepare-agent install`
 - Prepare coverage site with `mvn jacoco:report` 
