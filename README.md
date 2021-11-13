@@ -46,6 +46,12 @@ java -jar target/Zoo04Lab-1.0-SNAPSHOT
 
 -----
 
+## Prepare the App for Heroku
+
+- Add Procfile
+- Add system.properties
+- Configure pom.xml
+
 ## Deploy with Heroku
 
 - Heroku / New / Create new app - give it a name.
