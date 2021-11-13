@@ -27,27 +27,21 @@ Open Powershell Here as Admininstrator in your root project folder (the one with
 
 -----
 
-## Java 17
+## Run with Java 17
 
-Verify project Java version in Netbeans. 
+Netbeans
 
 - Open project in Netbeans.
 - Right-click project / Properties / Build / Compile / JDK Version / select JDK 17.
+- Right-click project / Clean and build 
+- Right-click project / Run
 
-Verify project Java in Powershell.
+Powershell
 
-```java -version```
-
------
-
-## Web App
-
-A user interface (besides the console) would be nice. 
-We voted on a web front end.
-
-```Bash
-$ mvn clean package spring-boot:repackage
-$ java -jar target/Zoo04Lab-1.0-SNAPSHOT
+```Powershell
+java -version
+mvn clean package spring-boot:repackage
+java -jar target/Zoo04Lab-1.0-SNAPSHOT
 ```
 
 -----
