@@ -51,7 +51,7 @@ java -jar target/Zoo04Lab-1.0-SNAPSHOT
 - Heroku / New / Create new app - give it a name.
 - Click on app / Settings / Buildpacks / Add Buildpack / Java 
 - Click on app / Settings / Deploy / GitHub / select repo / enable automatic deploys from main
-- Click on app / Settings / Deploy / click at bottom to deploy app 
+- Click on app / Settings / Deploy / Deploy branch (main) to deploy
 - Click on app / Settings / Overview / click on build logs to see progress, view errors
 
 -----
