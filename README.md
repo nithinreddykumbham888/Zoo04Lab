@@ -27,6 +27,19 @@ Open Powershell Here as Admininstrator in your root project folder (the one with
 
 -----
 
+## Java 17
+
+Verify project Java version in Netbeans. 
+
+- Open project in Netbeans.
+- Right-click project / Properties / Build / Compile / JDK Version / select JDK 17.
+
+Verify project Java in Powershell.
+
+```java -version```
+
+-----
+
 ## Web App
 
 A user interface (besides the console) would be nice. 
