@@ -27,7 +27,7 @@ Open Powershell Here as Admininstrator in your root project folder (the one with
 
 -----
 
-## Run with Java 17
+## Compile & Run with Java 17
 
 Netbeans
 
@@ -45,3 +45,18 @@ java -jar target/Zoo04Lab-1.0-SNAPSHOT
 ```
 
 -----
+
+## Deploy with Heroku
+
+- Heroku / New / Create new app - give it a name.
+- Click on app / Settings / Buildpacks / Add Buildpack / Java 
+- Click on app / Settings / Deploy / GitHub / select repo / enable automatic deploys from main
+- Click on app / Settings / Deploy / click at bottom to deploy app 
+- Click on app / Settings / Overview / click on build logs to see progress, view errors
+
+-----
+
+## References
+
+1. [Heroku - Customizing the JDK](https://devcenter.heroku.com/articles/customizing-the-jdk)
+
