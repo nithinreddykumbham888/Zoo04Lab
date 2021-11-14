@@ -24,3 +24,7 @@ We can use DATABASE_URL - or the individual variables depending on how we connec
 - Commmit .env-example to the public repo.
 - Add .env to .gitignore 
 - Share .env only with collaborators. 
+
+## Trouble Shooting - Windows File Explorer and .env
+
+The .env file has an extension, but no name. To create it in Windows File Explorer, right-click in the folder, New / Text Document / name it .env. (with a dot at the beginning and a dot at the end. This will create .env as needed. 
