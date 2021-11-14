@@ -28,3 +28,7 @@ We can use DATABASE_URL - or the individual variables depending on how we connec
 ## Trouble Shooting - Windows File Explorer and .env
 
 The .env file has an extension, but no name. To create it in Windows File Explorer, right-click in the folder, New / Text Document / name it .env. (with a dot at the beginning and a dot at the end. This will create .env as needed. 
+
+## Read 
+
+- [Heroku Postgres / Connecting in Java / Spring-Java](https://devcenter.heroku.com/articles/heroku-postgresql#spring-java)
