@@ -1,10 +1,10 @@
 # Heroku Data
 
-## Prerequisites
+## Previously
 
-Spring Boot web app deployed with Heroku. 
+A Spring Boot web app deployed with Heroku. 
 
-## Heroku - Add Resource
+## In Heroku - Add Resource to Store Central Data
 
 - Heroku / click on app / Resources / Add-ons / Heroku Postgres / Hobby Dev - Free
 - Heroku / click on app / Settings / Config Vars / Reveal Config Vars / verify DATABASE_URL
@@ -17,7 +17,12 @@ postgres://userblahblahfdd:10fpwdblahblah87@ec2-12-100-99-99.compute-1.amazonaws
 
 We can use DATABASE_URL - or the individual variables depending on how we connect. 
 
-## Keep Secrets Secret
+- When the app is running on Heroku, it has access to the Heroku DATABASE_URL.
+- When the app is running locally, create a DATABASE_URL key-value pair in our Windows System Environment Variables (just like we set JAVA_HOME). 
+
+## Keep Secrets Secret 
+
+Several other languages use a .env file to hold environment variables. 
 
 - Use a .env file to hold actual values. 
 - Use a .env-example file to hold fake values. 
