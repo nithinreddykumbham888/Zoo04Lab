@@ -17,7 +17,7 @@ import org.springframework.web.bind.annotation.RequestParam;
  * @author Denise Case
  */
 @Controller
-public class ZooIndexController {
+public class ZooController {
 
     private static final String GREETING_MESSAGE = "Welcome to our 542 Zoo!";
     private static final String GOODBYE_MESSAGE = "Thank you for visiting our zoo!";
@@ -75,6 +75,9 @@ public class ZooIndexController {
     public String persons() {
         return "persons";
     }
+    
+    
+    
 
     /**
      * Map GET request to "/rides" to rides() method.

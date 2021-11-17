@@ -19,86 +19,60 @@
 ## Test Coverage
 
 - Explore test coverage at https://denisecase.github.io/Zoo04Lab-Coverage/
+
+Test coverage report is hosted from a separate repo. 
+
+- Create a new test reporting repo in the cloud. Settings / GitHub Pages / set to publish. 
+- Clone this reporting repo down to your machine. 
+- Generate the report from this project repo on your machine using the commands below. 
+- Manually copy all files in the project target/site/jacoco folder into the root directory of this new reporting repo. 
+- Git add & commit, then git push the files up to the cloud reporting repo. 
+
+Regenerate results periodically.
+
+Open Powershell Here as Admininstrator in your root project folder (the one with pom.xml):
 - Prepare test results with `mvn clean jacoco:prepare-agent install`
 - Prepare coverage site with `mvn jacoco:report` 
 - This builds target/site/jacoco which is then copied to the hosted repo above.
 
 -----
 
-## Web App
+## Compile & Run with Java 17
 
-A user interface (besides the console) would be nice. 
-We voted on a web front end.
+Netbeans
 
-```Bash
-$ mvn clean package spring-boot:repackage
-$ java -jar target/Zoo04Lab-1.0-SNAPSHOT
-```
+- Open project in Netbeans.
+- Right-click project / Properties / Build / Compile / JDK Version / select JDK 17.
+- Right-click project / Clean and build 
+- Right-click project / Run
 
-## Keep Current - Upgrade to Java 17
-
-5 steps to update (details below):
-
-1. Netbeans -> 12.5 
-2. Java -> 17 
-3. Windows Edit System Environment Variables (JAVA_HOME, path)
-4. pom.xml (already complete - verify our current versions)
-5. IDE project settings -> set compile to JDK 17
-
-### 1) Upgrade Netbeans
-
-- Uninstall 12.4 (program available in C:\Program Files\NetBeans-12.4)
-- Download and install 12.5
-
-### 2) Upgrade Java
-
-Open Powershell as Admin and run this command to install Java 17. Must use --exact or -e.
-(winget works with install / upgrade / uninstall).
+Powershell
 
 ```Powershell
-winget install Microsoft.OpenJDK.17 -e
+java -version
+mvn clean package spring-boot:repackage
+java -jar target/Zoo04Lab-1.0-SNAPSHOT
 ```
-
-Verify location on your machine, e.g., C:\Program Files\Microsoft\jdk-17.0.0.35-hotspot
-
-### 3) Edit System Environment Variables (JAVA_HOME and path)
-
-Windows path must have exactly one JDK entry.
-
-- Hit Win key, Edit System Environment Variables. 
-- Verify/add JAVA_HOME (mine is C:\Program Files\Microsoft\jdk-17.0.0.35-hotspot)
-- Verify path includes exactly one Java entry - either %JAVA_HOME%\bin OR C:\Program Files\Microsoft\jdk-17.0.0.35-hotspot\bin and no other JDK or Java entries. 
-
-### 4) pom.xml  
-
-These have been updated. Find these in pom.xml:
-
-- java.version = 17
-- junit = 5.8.1
-- maven - see different versions by plugin
-
-### 5) NetBeans Project Compiler
-
-Open NetBeans. Right-click our Project / Properties  / Build / Compile / Java Platform
-
-- click "Manage Java Platforms", click "Add Platform", Type = Java Std Edition / Next 
-- Locate your new JDK 17 (mine is in  C:\Program Files\Microsoft\jdk-17.0.0.35-hotspot), click Next. It will fill in the information. Click Finish, Close.
-- Back in the Java Platform dropdown, Select JDK 17. 
-- Clean and build project to verify everything compiles. Try running ZooApp to verify.
 
 -----
 
-## 4 Principles of Object-Oriented Programming (OOP)
+## Prepare the App for Heroku
 
-- Encapsulation. Wrap code in good interfaces. Hide private data, expose publicly accessible methods.
-- Abstraction. Abstract general ideas that work for many, e.g. move is an abstraction of crawl, slither, fly.
-- Inheritance. Write once in a parent class and all the derived child classes get it for free.
-- Polymorphism. "Many shapes". One thing (e.g. move) can take many forms, e.g. a snake might move by slithering, while a bird might move by flying. 
+- Add Procfile
+- Add system.properties
+- Configure pom.xml
 
-## SOLID Principles ([Wikipedia](https://en.wikipedia.org/wiki/SOLID))
+## Deploy with Heroku
 
-- Single Responsibility Principle. Only one reason to change.
-- Open-Closed Principle. Open for extesion; closed for modification.
-- Liskov Substitution Principle. Use derived class just like base.
-- Interface Segregation Principle. Many client-specific interfaces.
-- Dependency Inversion Principle. Depend on abstract rather than concrete.
+- Heroku / New / Create new app - give it a name.
+- Click on app / Settings / Buildpacks / Add Buildpack / Java 
+- Click on app / Settings / Deploy / GitHub / select repo / enable automatic deploys from main
+- Click on app / Settings / Deploy / Deploy branch (main) to deploy
+- Click on app / Settings / Overview / click on build logs to see progress, view errors
+
+-----
+
+## References
+
+1. [Heroku - Customizing the JDK](https://devcenter.heroku.com/articles/customizing-the-jdk)
+
